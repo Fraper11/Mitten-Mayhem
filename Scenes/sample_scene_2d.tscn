@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://t5ra8ffmf7v6"]
+
+[ext_resource type="Script" uid="uid://i67l2vokmwe7" path="res://Scripts/CursorMovement.gd" id="1_atui7"]
+
+[node name="SampleScene2D" type="Node2D"]
+script = ExtResource("1_atui7")

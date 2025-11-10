@@ -1,6 +1,240 @@
-[gd_scene load_steps=2 format=3 uid="uid://t5ra8ffmf7v6"]
+[gd_scene load_steps=4 format=3 uid="uid://t5ra8ffmf7v6"]
 
 [ext_resource type="Script" uid="uid://i67l2vokmwe7" path="res://Scripts/CursorMovement.gd" id="1_atui7"]
+[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="2_cow4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6gbon"]
+size = Vector2(299, 111)
 
 [node name="SampleScene2D" type="Node2D"]
 script = ExtResource("1_atui7")
+
+[node name="AlgaeZone" type="Area2D" parent="."]
+position = Vector2(597, 325)
+script = ExtResource("2_cow4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AlgaeZone"]
+shape = SubResource("RectangleShape2D_6gbon")
+
+[node name="Border" type="ColorRect" parent="AlgaeZone"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="AlgaeZone"]
+offset_left = -150.24
+offset_top = -54.285
+offset_right = 148.76
+offset_bottom = 57.715
+mouse_filter = 2
+color = Color(0.32057843, 0.771271, 0.9487315, 1)
+
+[node name="Label" type="Label" parent="AlgaeZone/LightBlue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -11.5
+offset_right = 42.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Algae Zone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClamZone" type="Area2D" parent="."]
+position = Vector2(252, 327)
+script = ExtResource("2_cow4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClamZone"]
+shape = SubResource("RectangleShape2D_6gbon")
+
+[node name="Border" type="ColorRect" parent="ClamZone"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="ClamZone"]
+offset_left = -150.24
+offset_top = -54.285
+offset_right = 148.76
+offset_bottom = 57.715
+mouse_filter = 2
+color = Color(0.32057843, 0.771271, 0.9487315, 1)
+
+[node name="Label" type="Label" parent="ClamZone/LightBlue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -11.5
+offset_right = 41.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Clam Zone"
+
+[node name="SnailZone" type="Area2D" parent="."]
+position = Vector2(918, 325)
+script = ExtResource("2_cow4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnailZone"]
+shape = SubResource("RectangleShape2D_6gbon")
+
+[node name="Border" type="ColorRect" parent="SnailZone"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="SnailZone"]
+offset_left = -150.24
+offset_top = -54.285
+offset_right = 148.76
+offset_bottom = 57.715
+mouse_filter = 2
+color = Color(0.32057843, 0.771271, 0.9487315, 1)
+
+[node name="Label" type="Label" parent="SnailZone/LightBlue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Snail Zone"
+
+[node name="FishZone" type="Area2D" parent="."]
+position = Vector2(597, 467)
+script = ExtResource("2_cow4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishZone"]
+shape = SubResource("RectangleShape2D_6gbon")
+
+[node name="Border" type="ColorRect" parent="FishZone"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="FishZone"]
+offset_left = -150.24
+offset_top = -54.285
+offset_right = 148.76
+offset_bottom = 57.715
+mouse_filter = 2
+color = Color(0.32057843, 0.771271, 0.9487315, 1)
+
+[node name="Label" type="Label" parent="FishZone/LightBlue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fish Zone"
+
+[node name="House" type="Area2D" parent="."]
+position = Vector2(597, 148)
+script = ExtResource("2_cow4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House"]
+shape = SubResource("RectangleShape2D_6gbon")
+
+[node name="Border" type="ColorRect" parent="House"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="House"]
+offset_left = -150.24
+offset_top = -54.285
+offset_right = 148.76
+offset_bottom = 57.715
+mouse_filter = 2
+color = Color(0.7052916, 0.2132447, 0.21220645, 1)
+
+[node name="Label" type="Label" parent="House/LightBlue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = -11.5
+offset_right = 24.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "House"
+
+[node name="Storage" type="Area2D" parent="."]
+position = Vector2(925, 148)
+script = ExtResource("2_cow4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Storage"]
+shape = SubResource("RectangleShape2D_6gbon")
+
+[node name="Border" type="ColorRect" parent="Storage"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="Storage"]
+offset_left = -150.24
+offset_top = -54.285
+offset_right = 148.76
+offset_bottom = 57.715
+mouse_filter = 2
+color = Color(0.20937428, 0.4616903, 0.43734178, 1)
+
+[node name="Label" type="Label" parent="Storage/LightBlue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.26001
+offset_top = -13.214996
+offset_right = 30.73999
+offset_bottom = 9.785004
+grow_horizontal = 2
+grow_vertical = 2
+text = "Storage"

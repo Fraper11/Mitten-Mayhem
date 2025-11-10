@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 		mouseConfine = !mouseConfine
 		ToggleMouseConfine()
 
-func ToggleMouseConfine() -> void :
+func ToggleMouseConfine() -> void :#PRESS ESC TO FREE/CAPTURE THE CURSOR
 	if (mouseConfine):
 		Input.set_mouse_mode (Input.MOUSE_MODE_CONFINED)
 		print("Mouse Confined")

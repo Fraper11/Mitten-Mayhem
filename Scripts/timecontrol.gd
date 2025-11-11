@@ -28,4 +28,4 @@ func action():
 		skip()
 			
 func _ready():
-	pass
+	$Button.pressed.connect(skip)

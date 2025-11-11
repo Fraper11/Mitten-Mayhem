@@ -1,7 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://t5ra8ffmf7v6"]
+[gd_scene load_steps=10 format=3 uid="uid://t5ra8ffmf7v6"]
 
 [ext_resource type="Script" uid="uid://i67l2vokmwe7" path="res://Scripts/CursorMovement.gd" id="1_atui7"]
 [ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="2_cow4f"]
+[ext_resource type="Script" uid="uid://dx4onhidvcliq" path="res://Scripts/timecontrol.gd" id="3_pctbm"]
+[ext_resource type="Texture2D" uid="uid://c3f00oi7gypo7" path="res://Assets/clock01.png" id="4_n0j7p"]
+[ext_resource type="Texture2D" uid="uid://bs7qi5ke528s4" path="res://Assets/Nclpoint01.png" id="5_gr720"]
+[ext_resource type="Texture2D" uid="uid://qslhfcc6e2lw" path="res://Assets/EMclpointer01.png" id="6_tivhx"]
+[ext_resource type="Texture2D" uid="uid://dfml8l5tv15dm" path="res://Assets/Eclpointer01.png" id="7_nb7mk"]
+[ext_resource type="Texture2D" uid="uid://b0ff7igek3suu" path="res://Assets/Mclpointer01.png" id="8_leqsm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6gbon"]
 size = Vector2(299, 111)
@@ -238,3 +244,34 @@ offset_bottom = 9.785004
 grow_horizontal = 2
 grow_vertical = 2
 text = "Storage"
+
+[node name="timechange" type="Node2D" parent="."]
+position = Vector2(200, 100)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("3_pctbm")
+
+[node name="Clock01" type="Sprite2D" parent="timechange"]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_n0j7p")
+
+[node name="EMclpointer01" type="Sprite2D" parent="timechange"]
+position = Vector2(70, 0)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("6_tivhx")
+
+[node name="Mclpointer01" type="Sprite2D" parent="timechange"]
+visible = false
+position = Vector2(0, 70)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_leqsm")
+
+[node name="Eclpointer01" type="Sprite2D" parent="timechange"]
+visible = false
+position = Vector2(-69.99994, 0)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("7_nb7mk")
+
+[node name="Nclpoint01" type="Sprite2D" parent="timechange"]
+visible = false
+position = Vector2(0, -70)
+texture = ExtResource("5_gr720")

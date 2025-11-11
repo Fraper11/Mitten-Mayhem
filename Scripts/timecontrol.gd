@@ -1,7 +1,7 @@
 extends Node2D
-@export var ActionperTurn = 2
-var ActionNow = 0
-var PassedDay = 0
+@export var ActionperTurn : int = 2
+var ActionNow : int = 0
+var PassedDay : int = 0
 
 func one_round():
 		if$EMclpointer01.visible == true:

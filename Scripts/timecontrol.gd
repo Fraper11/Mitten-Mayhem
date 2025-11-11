@@ -17,7 +17,7 @@ func one_round():
 			$Nclpoint01.visible = false
 			$EMclpointer01.visible = true
 			PassedDay=PassedDay+1
-
+			$Label.text="%s day" %PassedDay
 func skip():
 	ActionNow=0
 	one_round()
@@ -29,3 +29,4 @@ func action():
 			
 func _ready():
 	$Button.pressed.connect(skip)
+	$Label.text="%s day" %PassedDay

@@ -282,3 +282,10 @@ offset_top = 234.99997
 offset_right = 379.99997
 offset_bottom = 284.99997
 text = "Skip"
+
+[node name="Label" type="Label" parent="timechange"]
+offset_left = 419.99994
+offset_top = -445.0
+offset_right = 1279.9998
+offset_bottom = 249.99994
+theme_override_font_sizes/font_size = 300

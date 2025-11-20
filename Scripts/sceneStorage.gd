@@ -13,6 +13,9 @@ var scenes = {
 }
 
 
+
+
+
 func get_scene(scene_id: SceneID) -> PackedScene:
 	return scenes.get(scene_id, null)
 

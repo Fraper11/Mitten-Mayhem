@@ -1,8 +1,7 @@
 extends Area2D
 
 @onready var border = $Border
-@onready var label = $LightBlue/Label
-@onready var player = $"../Player"
+@onready var label = $Label
 
 #@onready var animation = $AnimationPlayer  FOR ANIMATIONS
 

@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://hcwqurmojk1t"]
+[gd_scene load_steps=9 format=3 uid="uid://hcwqurmojk1t"]
 
 [ext_resource type="Texture2D" uid="uid://cffm2e0auow0e" path="res://Assets/laptop.PNG" id="1_xvb4y"]
 [ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="2_ftrsn"]
+[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="2_jda31"]
 [ext_resource type="Script" uid="uid://cj5rdpmsarhkg" path="res://Scripts/encyclopediabutton.gd" id="3_q8l06"]
 [ext_resource type="Script" uid="uid://7kw6fwb71bln" path="res://Scripts/weaponstorebutton.gd" id="4_c8aik"]
 [ext_resource type="Texture2D" uid="uid://clek3g40nnm6o" path="res://Assets/weapon00.png" id="4_cpag2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2u2x3"]
+radius = 35.206867
 
 [sub_resource type="LabelSettings" id="LabelSettings_c8aik"]
 
@@ -14,6 +18,28 @@
 position = Vector2(575, 325)
 scale = Vector2(0.449, 0.45)
 texture = ExtResource("1_xvb4y")
+
+[node name="Area2D" type="Area2D" parent="Laptop"]
+position = Vector2(527.8396, 308.8889)
+script = ExtResource("2_jda31")
+unlock_at_level = 1
+target_scene = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laptop/Area2D"]
+position = Vector2(4.454343, 2.222222)
+shape = SubResource("CircleShape2D_2u2x3")
+
+[node name="Border" type="ColorRect" parent="Laptop/Area2D"]
+offset_left = -154.99988
+offset_top = -60.00006
+offset_right = 154.00012
+offset_bottom = 62.99994
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="Laptop/Area2D"]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Encyclopediabutton" type="Button" parent="."]
 offset_left = 319.0
@@ -89,6 +115,7 @@ scale = Vector2(0.1, 0.1)
 icon = ExtResource("4_cpag2")
 flat = true
 script = ExtResource("4_c8aik")
+price = 500
 
 [node name="Weaponstore" type="Panel" parent="."]
 visible = false

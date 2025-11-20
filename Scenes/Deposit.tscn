@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=3 uid="uid://3tubfyx7p7u5"]
+
+[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="1_gbig2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icsek"]
+size = Vector2(299, 111)
+
+[node name="Deposit" type="Node2D"]
+
+[node name="Deposit" type="Area2D" parent="."]
+position = Vector2(591, 272)
+script = ExtResource("1_gbig2")
+unlock_at_level = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deposit"]
+shape = SubResource("RectangleShape2D_icsek")
+
+[node name="Border" type="ColorRect" parent="Deposit"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="Deposit"]
+offset_left = -150.24
+offset_top = -54.285
+offset_right = 148.76
+offset_bottom = 57.715
+mouse_filter = 2
+color = Color(0.095464595, 0.46801734, 0.4828999, 1)
+
+[node name="Label" type="Label" parent="Deposit/LightBlue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = -11.5
+offset_right = 24.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You are in the Deposit"
+
+[node name="GoBack" type="Area2D" parent="."]
+position = Vector2(591, 585)
+script = ExtResource("1_gbig2")
+target_scene = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoBack"]
+shape = SubResource("RectangleShape2D_icsek")
+
+[node name="Border" type="ColorRect" parent="GoBack"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="GoBack"]
+offset_left = -150.24
+offset_top = -54.285
+offset_right = 148.76
+offset_bottom = 57.715
+mouse_filter = 2
+color = Color(0.46699715, 0.2759016, 0.13497415, 1)
+
+[node name="Label" type="Label" parent="GoBack/LightBlue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = -11.5
+offset_right = 24.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Door
+Click to go Back!"

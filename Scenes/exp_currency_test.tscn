@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgme2wc6oy8xb"]
+
+[ext_resource type="Script" uid="uid://boauka0rkcxvy" path="res://Scripts/exp_currency_test.gd" id="1_qigve"]
+
+[node name="ExpCurrencyTest" type="Control"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_qigve")
+metadata/_edit_use_anchors_ = true
+
+[node name="Currency" type="Label" parent="."]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Level" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Experience" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0

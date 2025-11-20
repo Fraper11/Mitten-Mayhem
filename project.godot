@@ -11,9 +11,18 @@ config_version=5
 [application]
 
 config/name="MittenMayhem"
-run/main_scene="uid://t5ra8ffmf7v6"
+run/main_scene="uid://h31yil13mlem"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+ExpCurrencyTest="*res://Scenes/exp_currency_test.tscn"
+FadeLayer="*res://Scenes/Fade_Layer.tscn"
+CursorMovement="*res://Scripts/CursorMovement.gd"
+PlayerData="*res://Scripts/playerData.gd"
+SceneLoader="*res://Scripts/sceneLoader.gd"
+SceneStorage="*res://Scripts/sceneStorage.gd"
 
 [input]
 

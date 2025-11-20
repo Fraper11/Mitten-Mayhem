@@ -184,6 +184,8 @@ text = "Fish Zone"
 [node name="House" type="Area2D" parent="."]
 position = Vector2(597, 148)
 script = ExtResource("2_cow4f")
+unlock_at_level = 1
+target_scene = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House"]
 shape = SubResource("RectangleShape2D_6gbon")

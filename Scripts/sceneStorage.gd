@@ -7,10 +7,11 @@ enum SceneID { MAIN, HOUSE, DEPOSIT, NOTHING}
 # PackedScene references
 var scenes = {
 	SceneID.MAIN: preload("res://Scenes/sample_scene_2d.tscn"),
-	#SceneID.HOUSE: preload("res://Scenes/House.tscn")
+	SceneID.HOUSE: preload("res://Scenes/House.tscn"),
 	SceneID.DEPOSIT: preload("res://Scenes/Deposit.tscn"),
 	SceneID.NOTHING: null
 }
+
 
 func get_scene(scene_id: SceneID) -> PackedScene:
 	return scenes.get(scene_id, null)

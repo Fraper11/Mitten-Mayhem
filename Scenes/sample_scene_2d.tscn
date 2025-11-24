@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjolppghtt65m"]
+[gd_scene load_steps=10 format=3 uid="uid://cjolppghtt65m"]
 
-[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/interactables.gd" id="2_cow4f"]
+[ext_resource type="Script" uid="uid://btckmp6n3t16f" path="res://Scripts/TimecontrolData.gd" id="1_5ajef"]
+[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="2_cow4f"]
 [ext_resource type="Script" uid="uid://c7htsritkl36v" path="res://Scenes/unlock_page_test.gd" id="2_epvj8"]
 [ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="2_n0j7p"]
 [ext_resource type="Texture2D" uid="uid://clad1wl13lgpp" path="res://Assets/house2.0.PNG" id="2_pctbm"]
@@ -16,10 +17,12 @@ size = Vector2(175, 196)
 size = Vector2(154, 173)
 
 [node name="SampleScene2D" type="Node2D"]
+script = ExtResource("1_5ajef")
 
 [node name="AlgaeZone" type="Area2D" parent="."]
 position = Vector2(597, 325)
 script = ExtResource("2_cow4f")
+action_cost = true
 unlock_at_level = 1
 exp_to_add = 1
 currency_to_add = 10
@@ -102,6 +105,7 @@ vertical_alignment = 1
 [node name="ClamZone" type="Area2D" parent="."]
 position = Vector2(252, 327)
 script = ExtResource("2_cow4f")
+action_cost = true
 unlock_at_level = 2
 exp_to_add = 2
 currency_to_add = 15
@@ -142,6 +146,7 @@ text = "Clam Zone"
 [node name="SnailZone" type="Area2D" parent="."]
 position = Vector2(918, 325)
 script = ExtResource("2_cow4f")
+action_cost = true
 unlock_at_level = 3
 exp_to_add = 3
 currency_to_add = 20
@@ -182,6 +187,7 @@ text = "Snail Zone"
 [node name="FishZone" type="Area2D" parent="."]
 position = Vector2(597, 467)
 script = ExtResource("2_cow4f")
+action_cost = true
 unlock_at_level = 4
 exp_to_add = 5
 currency_to_add = 30

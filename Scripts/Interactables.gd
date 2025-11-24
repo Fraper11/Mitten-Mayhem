@@ -4,7 +4,7 @@ extends Area2D
 @onready var label = $Label
 
 #@onready var animation = $AnimationPlayer  FOR ANIMATIONS
-
+@export var action_cost =false
 @export var unlock_at_level :int 
 @export var exp_to_add : int = 0
 @export var currency_to_add : int = 0
@@ -44,6 +44,8 @@ func _on_mouse_clicked_left(viewport, event, shape_idx):
 				print("YOU NEED TO LEVEL UP","CURRENT LEVEL: ",PlayerData.level, "LEVEL NEEDED: ",unlock_at_level)
 				return
 			print("You clicked, Something happens NOW!")
+			if (action_cost):
+				TimecontrolData.action()
 			PlayerData.add_exp(exp_to_add)
 			PlayerData.add_currency(currency_to_add)
 			if (target_scene != SceneStorage.SceneID.NOTHING):

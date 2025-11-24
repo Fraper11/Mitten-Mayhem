@@ -26,6 +26,7 @@ SceneLoader="*res://Scripts/sceneLoader.gd"
 SceneStorage="*res://Scripts/sceneStorage.gd"
 GlobalTimer="*res://Scripts/timer.gd"
 EncyclopediaDb="*res://Scripts/encyclopedia_DB.gd"
+TimecontrolData="*res://Scripts/TimecontrolData.gd"
 
 [display]
 

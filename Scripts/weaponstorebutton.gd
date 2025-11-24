@@ -1,5 +1,7 @@
 extends Button
 @export var price :int
+@export var weapon_name :String
+
 var purchased = false
 func weaponstore():
 	if purchased==false&& PlayerData.currency>=price:
@@ -16,7 +18,8 @@ func buyweapon():
 	purchased = true
 	$"../Weaponstore/Button2".disabled=true
 	PlayerData.add_currency(-price)
-	print("havegun")
+	PlayerData.unlock_weapon(weapon_name)
+	print("Weapon Purchased:", weapon_name)
 
 func _ready():
 	$".".pressed.connect(weaponstore)

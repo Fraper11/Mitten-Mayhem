@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://h31yil13mlem"]
 
-[ext_resource type="Script" uid="uid://i67l2vokmwe7" path="res://Scripts/CursorMovement.gd" id="1_s1b4b"]
-[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="2_snxwr"]
+[ext_resource type="Script" uid="uid://i67l2vokmwe7" path="res://Scripts/cursorMovement.gd" id="1_s1b4b"]
+[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/interactables.gd" id="2_snxwr"]
 [ext_resource type="Script" uid="uid://dx4onhidvcliq" path="res://Scripts/timecontrol.gd" id="3_b2f5p"]
 [ext_resource type="Texture2D" uid="uid://c3f00oi7gypo7" path="res://Assets/clock01.png" id="4_dnhx3"]
 [ext_resource type="Texture2D" uid="uid://qslhfcc6e2lw" path="res://Assets/EMclpointer01.png" id="5_7g1pw"]

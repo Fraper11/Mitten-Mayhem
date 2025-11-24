@@ -1,0 +1,189 @@
+[gd_scene load_steps=9 format=3 uid="uid://cnxj567dcc85w"]
+
+[ext_resource type="Script" uid="uid://b6gk44p1ti6ik" path="res://Scripts/weapon_deposit.gd" id="1_tuslq"]
+[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="3_00oru"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lpic"]
+bg_color = Color(0.48235294, 0.40392157, 0.20392157, 0.72156864)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo4ky"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00oru"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuslq"]
+bg_color = Color(0, 0, 0, 0.18039216)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lpic"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ls3mv"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="WeaponDeposit" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tuslq")
+target_scene = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0lpic")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(86.39, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mo4ky")
+
+[node name="Sandal" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Sandal"
+
+[node name="CrabPounder" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CrabPounder"
+
+[node name="Gun" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Gun"
+
+[node name="Hammer" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Hammer"
+
+[node name="Panel2" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_00oru")
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Upper" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tuslq")
+
+[node name="Box" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Upper"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 53.999996
+offset_right = 191.91362
+offset_bottom = 86.22748
+scale = Vector2(11.923847, 9.681178)
+
+[node name="Icon" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Upper"]
+layout_mode = 0
+offset_left = 227.99998
+offset_top = 102.00001
+offset_right = 253.9983
+offset_bottom = 123.278435
+scale = Vector2(11.923847, 9.681178)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0lpic")
+
+[node name="Description" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_tuslq")
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Description"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 12.0
+offset_right = 747.0
+offset_bottom = 17.0
+
+[node name="DescriptionLabel" type="Label" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Description"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 0
+offset_top = 20.0
+offset_right = 748.0
+offset_bottom = 177.2
+text = "Weapon Description"
+label_settings = SubResource("LabelSettings_ls3mv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel2" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Description"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 179.0
+offset_right = 749.0
+offset_bottom = 184.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.99200004
+anchor_right = 1.0
+offset_left = -69.78406
+offset_top = 9.0
+offset_right = -14.0
+offset_bottom = 58.0
+grow_horizontal = 0
+icon = ExtResource("3_00oru")
+expand_icon = true
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Gun" to="." method="_on_gun_button_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Hammer" to="." method="_on_gun_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_close_weapon_storage_button_pressed"]

@@ -1,0 +1,21 @@
+{
+	
+	"PAGE_001": {
+		"id": 2,
+		"title": "The Chinese Mitten Crab",
+		"text": "The Chinese Mitten Crab is a predatory crab known for its hairy claws and its invasive intent. It lives in fresh waters.",
+		"image": "res://Assets/Crab01.png"
+	},
+	"PAGE_002": {
+		"id": 1,
+		"title": "Sea Snail",
+		"text": "Sea snails are small marine gastropods found in shallow waters. They have spiral shells and move slowly.",
+		"image": ""
+	},
+	"PAGE_003": {
+		"id": 3,
+		"title": "Fishing Boat",
+		"text": "Fishing boats allow fishermen to access deeper oceans. They vary in size and purpose.",
+		"image": ""
+	}
+}

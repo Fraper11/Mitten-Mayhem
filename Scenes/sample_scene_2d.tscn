@@ -1,15 +1,19 @@
 [gd_scene load_steps=9 format=3 uid="uid://cjolppghtt65m"]
 
-[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="2_cow4f"]
-[ext_resource type="Script" uid="uid://dx4onhidvcliq" path="res://Scripts/timecontrol.gd" id="3_pctbm"]
-[ext_resource type="Texture2D" uid="uid://c3f00oi7gypo7" path="res://Assets/clock01.png" id="4_n0j7p"]
-[ext_resource type="Texture2D" uid="uid://bs7qi5ke528s4" path="res://Assets/Nclpoint01.png" id="5_gr720"]
-[ext_resource type="Texture2D" uid="uid://qslhfcc6e2lw" path="res://Assets/EMclpointer01.png" id="6_tivhx"]
-[ext_resource type="Texture2D" uid="uid://dfml8l5tv15dm" path="res://Assets/Eclpointer01.png" id="7_nb7mk"]
-[ext_resource type="Texture2D" uid="uid://b0ff7igek3suu" path="res://Assets/Mclpointer01.png" id="8_leqsm"]
+[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/interactables.gd" id="2_cow4f"]
+[ext_resource type="Script" uid="uid://c7htsritkl36v" path="res://Scenes/unlock_page_test.gd" id="2_epvj8"]
+[ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="2_n0j7p"]
+[ext_resource type="Texture2D" uid="uid://clad1wl13lgpp" path="res://Assets/house2.0.PNG" id="2_pctbm"]
+[ext_resource type="Texture2D" uid="uid://ddm3udfh1ppvg" path="res://Assets/storehouse2.0.PNG" id="4_gr720"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6gbon"]
-size = Vector2(299, 111)
+size = Vector2(297, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tivhx"]
+size = Vector2(175, 196)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb7mk"]
+size = Vector2(154, 173)
 
 [node name="SampleScene2D" type="Node2D"]
 
@@ -52,6 +56,46 @@ offset_bottom = 13.214996
 grow_horizontal = 2
 grow_vertical = 2
 text = "Algae Zone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UnlockPage" type="Area2D" parent="."]
+position = Vector2(249, 470)
+script = ExtResource("2_epvj8")
+unlock_at_level = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnlockPage"]
+shape = SubResource("RectangleShape2D_6gbon")
+
+[node name="Border" type="ColorRect" parent="UnlockPage"]
+offset_left = -155.0
+offset_top = -60.0
+offset_right = 154.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LightBlue" type="ColorRect" parent="UnlockPage"]
+offset_left = -150.23999
+offset_top = -54.285004
+offset_right = 148.76001
+offset_bottom = 57.714996
+mouse_filter = 2
+color = Color(0.87781537, 0.6846792, 0, 1)
+
+[node name="Label" type="Label" parent="UnlockPage"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.23999
+offset_top = -9.785004
+offset_right = 41.76001
+offset_bottom = 13.214996
+grow_horizontal = 2
+grow_vertical = 2
+text = "At Level 5 press here to unlock a page"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -143,6 +187,7 @@ exp_to_add = 5
 currency_to_add = 30
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FishZone"]
+position = Vector2(1.5, 5)
 shape = SubResource("RectangleShape2D_6gbon")
 
 [node name="Border" type="ColorRect" parent="FishZone"]
@@ -177,121 +222,52 @@ text = "Fish Zone"
 
 [node name="House" type="Area2D" parent="."]
 position = Vector2(597, 148)
-script = ExtResource("2_cow4f")
+script = ExtResource("2_n0j7p")
 target_scene = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="House"]
-shape = SubResource("RectangleShape2D_6gbon")
+[node name="Borders" type="TextureRect" parent="House"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -99.0
+offset_top = -111.0
+offset_right = 106.0
+offset_bottom = 94.0
+texture = ExtResource("2_pctbm")
+expand_mode = 1
 
-[node name="Border" type="ColorRect" parent="House"]
-offset_left = -155.0
-offset_top = -60.0
-offset_right = 154.0
-offset_bottom = 63.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="TextureRect" type="TextureRect" parent="House"]
+offset_left = -97.0
+offset_top = -109.0
+offset_right = 103.0
+offset_bottom = 91.0
+texture = ExtResource("2_pctbm")
+expand_mode = 1
 
-[node name="LightBlue" type="ColorRect" parent="House"]
-offset_left = -150.23999
-offset_top = -54.285004
-offset_right = 148.76001
-offset_bottom = 57.714996
-mouse_filter = 2
-color = Color(0.7052916, 0.2132447, 0.21220645, 1)
-
-[node name="Label" type="Label" parent="House"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -25.23999
-offset_top = -9.785004
-offset_right = 23.76001
-offset_bottom = 13.214996
-grow_horizontal = 2
-grow_vertical = 2
-text = "House"
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="House"]
+position = Vector2(2.5, -8)
+shape = SubResource("RectangleShape2D_tivhx")
 
 [node name="Storage" type="Area2D" parent="."]
 position = Vector2(925, 148)
-script = ExtResource("2_cow4f")
+script = ExtResource("2_n0j7p")
 target_scene = 2
 
+[node name="Borders" type="TextureRect" parent="Storage"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -99.0
+offset_top = -95.0
+offset_right = 106.0
+offset_bottom = 110.0
+texture = ExtResource("4_gr720")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Storage"]
+offset_left = -97.0
+offset_top = -92.0
+offset_right = 103.0
+offset_bottom = 108.0
+texture = ExtResource("4_gr720")
+expand_mode = 1
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Storage"]
-shape = SubResource("RectangleShape2D_6gbon")
-
-[node name="Border" type="ColorRect" parent="Storage"]
-offset_left = -155.0
-offset_top = -60.0
-offset_right = 154.0
-offset_bottom = 63.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="LightBlue" type="ColorRect" parent="Storage"]
-offset_left = -150.23999
-offset_top = -54.285004
-offset_right = 148.76001
-offset_bottom = 57.714996
-mouse_filter = 2
-color = Color(0.20937428, 0.4616903, 0.43734178, 1)
-
-[node name="Label" type="Label" parent="Storage"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -30.0
-offset_top = -11.5
-offset_right = 30.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Storage"
-
-[node name="timechange" type="Node2D" parent="."]
-position = Vector2(200, 100)
-scale = Vector2(0.2, 0.2)
-script = ExtResource("3_pctbm")
-
-[node name="Clock01" type="Sprite2D" parent="timechange"]
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("4_n0j7p")
-
-[node name="EMclpointer01" type="Sprite2D" parent="timechange"]
-position = Vector2(70, 0)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("6_tivhx")
-
-[node name="Mclpointer01" type="Sprite2D" parent="timechange"]
-visible = false
-position = Vector2(0, 70)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("8_leqsm")
-
-[node name="Eclpointer01" type="Sprite2D" parent="timechange"]
-visible = false
-position = Vector2(-69.99994, 0)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("7_nb7mk")
-
-[node name="Nclpoint01" type="Sprite2D" parent="timechange"]
-visible = false
-position = Vector2(0, -70)
-texture = ExtResource("5_gr720")
-
-[node name="Button" type="Button" parent="timechange"]
-offset_left = 259.99997
-offset_top = 234.99997
-offset_right = 379.99997
-offset_bottom = 284.99997
-text = "Skip"
-
-[node name="Label" type="Label" parent="timechange"]
-offset_left = 419.99994
-offset_top = -445.0
-offset_right = 1279.9998
-offset_bottom = 249.99994
-theme_override_font_sizes/font_size = 300
+position = Vector2(3, 2.5)
+shape = SubResource("RectangleShape2D_nb7mk")

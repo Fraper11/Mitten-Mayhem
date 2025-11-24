@@ -18,11 +18,20 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 ExpCurrencyTest="*res://Scenes/exp_currency_test.tscn"
+WeaponDeposit="*res://Scenes/weapon_deposit.tscn"
 FadeLayer="*res://Scenes/Fade_Layer.tscn"
-CursorMovement="*res://Scripts/CursorMovement.gd"
+CursorMovement="*res://Scripts/cursorMovement.gd"
 PlayerData="*res://Scripts/playerData.gd"
 SceneLoader="*res://Scripts/sceneLoader.gd"
 SceneStorage="*res://Scripts/sceneStorage.gd"
+GlobalTimer="*res://Scripts/timer.gd"
+EncyclopediaDb="*res://Scripts/encyclopedia_DB.gd"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 

@@ -1,0 +1,272 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5tceaxpjfe6g"]
+
+[ext_resource type="Texture2D" uid="uid://clek3g40nnm6o" path="res://Assets/weapon00.png" id="1_8onj2"]
+[ext_resource type="Script" uid="uid://cbtibi6he22v1" path="res://Scripts/weapon_store.gd" id="1_ki471"]
+[ext_resource type="Texture2D" uid="uid://dwjkbrakpc6a7" path="res://Assets/salmon.PNG" id="3_d8dqu"]
+[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="4_d8dqu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aggoa"]
+bg_color = Color(0.38933247, 0.6033945, 0.39186558, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ywo4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2fli6"]
+texture = ExtResource("1_8onj2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2l8g8"]
+texture = ExtResource("3_d8dqu")
+
+[node name="WeaponStore" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ki471")
+target_scene = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aggoa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7ywo4")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Upper" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Icon" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Upper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = -17.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2fli6")
+
+[node name="Lower" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Buy" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Lower"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "HAMMER"
+
+[node name="Cost" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/Lower"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="Upper" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Icon" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer/Upper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = -17.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2l8g8")
+
+[node name="Lower" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Buy" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer/Lower"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "GUN"
+
+[node name="Cost" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer/Lower"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="Upper" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Icon" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer/Upper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = -17.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lower" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Buy" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer/Lower"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cost" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer/Lower"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="Upper" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Icon" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer4/VBoxContainer/Upper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = -17.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lower" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Buy" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer4/VBoxContainer/Lower"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cost" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer4/VBoxContainer/Lower"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel3" type="Panel" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -162.0
+offset_top = 58.0
+offset_right = -36.0
+offset_bottom = 136.0
+grow_horizontal = 0
+icon = ExtResource("4_d8dqu")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Button" to="." method="_on_close_weapon_store_button_pressed"]

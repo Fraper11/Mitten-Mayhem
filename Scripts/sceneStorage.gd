@@ -3,12 +3,15 @@ extends Node
 @onready var current_scene_id: SceneID = SceneID.MAIN
 
 
-enum SceneID { MAIN, HOUSE, DEPOSIT, NOTHING}
+enum SceneID { MAIN, HOUSE, DEPOSIT,WEAPONSTORAGE,WEAPONSTORE,ENCYCLOPEDIA, NOTHING}
 # PackedScene references
 var scenes = {
 	SceneID.MAIN: preload("res://Scenes/sample_scene_2d.tscn"),
 	SceneID.HOUSE: preload("res://Scenes/House.tscn"),
 	SceneID.DEPOSIT: preload("res://Scenes/Deposit.tscn"),
+	SceneID.WEAPONSTORAGE : load("res://Scenes/weapon_deposit.tscn"),
+	SceneID.WEAPONSTORE : load("res://Scenes/Weapon_Store.tscn"),
+	SceneID.ENCYCLOPEDIA : load("res://Scenes/Encyclopedia.tscn"),
 	SceneID.NOTHING: null
 }
 

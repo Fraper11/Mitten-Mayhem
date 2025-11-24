@@ -26,7 +26,6 @@ func _ready():
 
 func _on_mouse_entered():
 	#animation.play("mouse_entered") FOR ANIMATION
-	print("Mouse Entered")
 	border.size = hover_size
 	border.position = -border.size / 2 
 	label.modulate = hoverColor
@@ -34,7 +33,6 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	#animation.play("mouse_exited") FOR ANIMATION
-	print("Mouse Exited")
 	border.size = normal_size
 	border.position = -border.size / 2 
 	label.modulate = originalColor

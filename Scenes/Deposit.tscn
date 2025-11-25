@@ -1,38 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt4skcr58o22s"]
+[gd_scene load_steps=6 format=3 uid="uid://dt4skcr58o22s"]
 
-[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/interactables.gd" id="1_gbig2"]
-[ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="1_gkd5v"]
+[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="1_gbig2"]
+[ext_resource type="Script" path="res://Scripts/switchSceneInteractables.gd" id="1_gkd5v"]
+[ext_resource type="Texture2D" uid="uid://veyx4sihpyg3" path="res://Assets/storageroom.PNG" id="1_icsek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_icsek"]
-size = Vector2(299, 111)
+size = Vector2(260, 73)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_gbig2"]
 specular_color = Color(0, 0, 0, 1)
 
 [node name="Deposit" type="Node2D"]
 
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 1153.0
+offset_bottom = 647.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = ExtResource("1_icsek")
+expand_mode = 1
+
 [node name="Deposit" type="Area2D" parent="."]
-position = Vector2(591, 272)
+position = Vector2(796, 389)
 script = ExtResource("1_gkd5v")
 target_scene = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deposit"]
+position = Vector2(5.5, 8)
 shape = SubResource("RectangleShape2D_icsek")
 
 [node name="Borders" type="TextureRect" parent="Deposit"]
 modulate = Color(0, 0, 0, 1)
-offset_left = -155.0
-offset_top = -60.0
-offset_right = 154.0
-offset_bottom = 63.0
+offset_left = -117.0
+offset_top = -31.0
+offset_right = 113.0
+offset_bottom = 47.0
 mouse_filter = 2
 texture = SubResource("CanvasTexture_gbig2")
 
 [node name="LightBlue" type="ColorRect" parent="Deposit"]
-offset_left = -150.24
-offset_top = -54.285
-offset_right = 148.76
-offset_bottom = 57.715
+offset_left = -112.000015
+offset_top = -27.999996
+offset_right = 105.999985
+offset_bottom = 45.000004
 mouse_filter = 2
 color = Color(0.095464595, 0.46801734, 0.4828999, 1)
 
@@ -42,27 +54,28 @@ offset_top = -24.5
 offset_right = 62.5
 offset_bottom = 24.5
 text = "Weapon Storage"
-vertical_alignment = 1
+vertical_alignment = 2
 
 [node name="GoBack" type="Area2D" parent="."]
 position = Vector2(591, 585)
 script = ExtResource("1_gbig2")
-target_scene = 0
+target_scene = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoBack"]
+position = Vector2(26, 21.5)
 shape = SubResource("RectangleShape2D_icsek")
 
 [node name="Border" type="ColorRect" parent="GoBack"]
-offset_left = -155.0
-offset_top = -60.0
-offset_right = 154.0
+offset_left = -105.0
+offset_top = -17.0
+offset_right = 157.0
 offset_bottom = 63.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="LightBlue" type="ColorRect" parent="GoBack"]
-offset_left = -150.24
-offset_top = -54.285
+offset_left = -92.000015
+offset_top = -10.000027
 offset_right = 148.76
 offset_bottom = 57.715
 mouse_filter = 2
@@ -74,10 +87,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -63.23999
-offset_top = -22.784973
-offset_right = 61.76001
-offset_bottom = 26.215027
+offset_left = -41.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Door

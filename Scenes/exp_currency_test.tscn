@@ -25,10 +25,10 @@ metadata/_edit_use_anchors_ = true
 [node name="LvExpBar" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 218.0
-offset_top = 5.0
-offset_right = 258.0
-offset_bottom = 45.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 42.0
+offset_bottom = 41.0
 
 [node name="TextureRect" type="TextureRect" parent="LvExpBar"]
 layout_mode = 1
@@ -73,10 +73,10 @@ text = "exp: 1/10"
 [node name="CurrencyBar" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 31.0
-offset_top = 16.0
-offset_right = 71.0
-offset_bottom = 56.0
+offset_left = 26.0
+offset_top = 56.0
+offset_right = 66.0
+offset_bottom = 96.0
 
 [node name="TextureRect" type="TextureRect" parent="CurrencyBar"]
 layout_mode = 0
@@ -98,7 +98,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Coins:"
 
 [node name="timechange" type="Node2D" parent="."]
-position = Vector2(453, 39)
+position = Vector2(46, 124.00001)
 scale = Vector2(0.07999022, 0.07999999)
 script = ExtResource("4_mvagk")
 
@@ -128,16 +128,9 @@ visible = false
 position = Vector2(0, -70)
 texture = ExtResource("9_n4xhf")
 
-[node name="Button" type="Button" parent="timechange"]
-offset_left = 259.99997
-offset_top = 234.99997
-offset_right = 379.99997
-offset_bottom = 284.99997
-text = "Skip"
-
 [node name="Label" type="Label" parent="timechange"]
-offset_left = 419.99994
-offset_top = -445.0
-offset_right = 1279.9998
-offset_bottom = 249.99994
+offset_left = -450.055
+offset_top = 399.99997
+offset_right = 409.945
+offset_bottom = 809.0
 theme_override_font_sizes/font_size = 300

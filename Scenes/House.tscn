@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cffm2e0auow0e" path="res://Assets/laptop.PNG" id="1_xvb4y"]
 [ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="2_ftrsn"]
-[ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="2_jda31"]
+[ext_resource type="Script" path="res://Scripts/switchSceneInteractables.gd" id="2_jda31"]
 [ext_resource type="Script" uid="uid://cj5rdpmsarhkg" path="res://Scripts/encyclopediabutton.gd" id="3_q8l06"]
 [ext_resource type="Texture2D" uid="uid://clek3g40nnm6o" path="res://Assets/weapon00.png" id="4_cpag2"]
 
@@ -24,7 +24,7 @@ texture = ExtResource("1_xvb4y")
 [node name="PowerOffButton" type="Area2D" parent="Laptop"]
 position = Vector2(527.8396, 308.8889)
 script = ExtResource("2_jda31")
-target_scene = 0
+target_scene = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Laptop/PowerOffButton"]
 position = Vector2(4.454343, 2.222222)

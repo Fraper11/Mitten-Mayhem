@@ -1,7 +1,7 @@
 extends Area2D
 
-@onready var border = $Border
-@onready var label = $Label
+#@onready var border = $Border
+#@onready var label = $Label
 
 #@onready var animation = $AnimationPlayer  FOR ANIMATIONS
 @export var action_cost =false
@@ -19,23 +19,25 @@ func _ready():
 	connect("mouse_entered", Callable(self, "_on_mouse_entered"))
 	connect("mouse_exited", Callable(self, "_on_mouse_exited"))
 	connect("input_event", Callable(self, "_on_mouse_clicked_left"))
-	normal_size = border.size
-	hover_size = border.size + Vector2(20, 20)
-	border.position = -border.size / 2
+	#normal_size = border.size
+	#hover_size = border.size + Vector2(20, 20)
+	#border.position = -border.size / 2
 
 
 func _on_mouse_entered():
+	pass
 	#animation.play("mouse_entered") FOR ANIMATION
-	border.size = hover_size
-	border.position = -border.size / 2 
-	label.modulate = hoverColor
+	#border.size = hover_size
+	#border.position = -border.size / 2 
+	#label.modulate = hoverColor
 
 
 func _on_mouse_exited():
+	pass
 	#animation.play("mouse_exited") FOR ANIMATION
-	border.size = normal_size
-	border.position = -border.size / 2 
-	label.modulate = originalColor
+	#border.size = normal_size
+	#border.position = -border.size / 2 
+	#label.modulate = originalColor
 	
 func _on_mouse_clicked_left(viewport, event, shape_idx):
 	if event is InputEventMouseButton:

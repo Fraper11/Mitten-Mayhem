@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cin5lavf8vf61"
-path="res://.godot/imported/water tile animated8.png-7372222ed5fb56debdde83a4e578827c.ctex"
+uid="uid://c2mtk0gkl8iyw"
+path="res://.godot/imported/water tile animated7.png-1557159d7d431917b91c744c9cbb8636.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/water tile animated8.png"
-dest_files=["res://.godot/imported/water tile animated8.png-7372222ed5fb56debdde83a4e578827c.ctex"]
+source_file="res://Assets/Tiles/water(old)/water tile animated7.png"
+dest_files=["res://.godot/imported/water tile animated7.png-1557159d7d431917b91c744c9cbb8636.ctex"]
 
 [params]
 

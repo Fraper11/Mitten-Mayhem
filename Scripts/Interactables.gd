@@ -9,6 +9,7 @@ extends Area2D
 @export var exp_to_add : int = 0
 @export var currency_to_add : int = 0
 @export var target_scene : SceneStorage.SceneID = SceneStorage.SceneID.NOTHING
+@export var crab_to_spawn : int
 
 var normal_size: Vector2
 var hover_size: Vector2
@@ -48,6 +49,7 @@ func _on_mouse_clicked_left(viewport, event, shape_idx):
 			print("You clicked, Something happens NOW!")
 			if (action_cost):
 				TimecontrolData.action()
+				EnemySpawner.spawn_crab(crab_to_spawn)
 			PlayerData.add_exp(exp_to_add)
 			PlayerData.add_currency(currency_to_add)
 			if (target_scene != SceneStorage.SceneID.NOTHING):

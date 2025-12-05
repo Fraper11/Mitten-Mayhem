@@ -8,7 +8,7 @@ signal weapon_unlocked(weapon_name: String)
 @onready var experience : int = 0
 @onready var exp_to_next_level : int = 10
 @onready var currency : int = 100
-
+@onready var crab_inventory_counter : int = 0
 
 var unlocked_pages = {}
 
@@ -46,3 +46,6 @@ func get_unlocked_pages():
 		if unlocked_pages[page_id]:
 			list[page_id] = EncyclopediaDb.pages[page_id]
 	return list
+
+func add_crab_to_inventory(crabs : int) :
+	crab_inventory_counter += crabs

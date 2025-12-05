@@ -17,6 +17,7 @@ config/icon="res://Assets/icon.svg"
 
 [autoload]
 
+EnemySpawner="*res://Scenes/enemy_spawner.tscn"
 ExpCurrencyTest="*res://Scenes/exp_currency_test.tscn"
 WeaponDeposit="*res://Scenes/weapon_deposit.tscn"
 FadeLayer="*res://Scenes/Fade_Layer.tscn"
@@ -30,7 +31,6 @@ TimecontrolData="*res://Scripts/TimecontrolData.gd"
 
 [display]
 
-window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 

@@ -1,15 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://hcwqurmojk1t"]
+[gd_scene load_steps=6 format=3 uid="uid://hcwqurmojk1t"]
 
 [ext_resource type="Texture2D" uid="uid://cffm2e0auow0e" path="res://Assets/laptop.PNG" id="1_xvb4y"]
-[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="2_ftrsn"]
 [ext_resource type="Script" path="res://Scripts/switchSceneInteractables.gd" id="2_jda31"]
-[ext_resource type="Script" uid="uid://cj5rdpmsarhkg" path="res://Scripts/encyclopediabutton.gd" id="3_q8l06"]
 [ext_resource type="Texture2D" uid="uid://clek3g40nnm6o" path="res://Assets/weapon00.png" id="4_cpag2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2u2x3"]
 radius = 35.206867
-
-[sub_resource type="LabelSettings" id="LabelSettings_c8aik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpag2"]
 size = Vector2(175, 196)
@@ -33,105 +29,6 @@ shape = SubResource("CircleShape2D_2u2x3")
 [node name="Borders" type="TextureRect" parent="Laptop/PowerOffButton"]
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Encyclopediabutton" type="Button" parent="."]
-offset_left = 319.0
-offset_top = 101.0
-offset_right = 827.0
-offset_bottom = 479.0
-scale = Vector2(0.1, 0.1)
-icon = ExtResource("2_ftrsn")
-flat = true
-script = ExtResource("3_q8l06")
-
-[node name="Encyclopedia" type="Panel" parent="."]
-visible = false
-offset_left = 297.0
-offset_top = 84.0
-offset_right = 838.0
-offset_bottom = 436.0
-
-[node name="Label" type="Label" parent="Encyclopedia"]
-layout_mode = 0
-offset_right = 540.0
-offset_bottom = 29.0
-text = "Information of crabs"
-label_settings = SubResource("LabelSettings_c8aik")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="Encyclopedia"]
-layout_mode = 0
-offset_left = 511.0
-offset_right = 539.0
-offset_bottom = 31.0
-text = "X"
-flat = true
-
-[node name="Button2" type="Button" parent="Encyclopedia"]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 31.0
-offset_right = 59.0
-offset_bottom = 66.0
-text = "habitat"
-flat = true
-
-[node name="Panel" type="Panel" parent="Encyclopedia"]
-visible = false
-layout_mode = 0
-offset_left = 93.0
-offset_top = 62.0
-offset_right = 456.0
-offset_bottom = 272.0
-
-[node name="Label" type="Label" parent="Encyclopedia/Panel"]
-layout_mode = 0
-offset_right = 366.0
-offset_bottom = 214.0
-text = "Habitat of crabs"
-
-[node name="Button" type="Button" parent="Encyclopedia/Panel"]
-layout_mode = 0
-offset_left = 338.0
-offset_top = -1.0
-offset_right = 362.0
-offset_bottom = 32.0
-text = "X"
-
-[node name="Weaponstore" type="Panel" parent="."]
-visible = false
-offset_left = 298.0
-offset_top = 83.0
-offset_right = 839.0
-offset_bottom = 436.0
-
-[node name="Label" type="Label" parent="Weaponstore"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 3.0
-offset_right = 539.0
-offset_bottom = 34.0
-text = "WeaponStore"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="Weaponstore"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = -2.0
-offset_right = 540.0
-offset_bottom = 29.0
-text = "X"
-flat = true
-
-[node name="Button2" type="Button" parent="Weaponstore"]
-layout_mode = 0
-offset_left = 30.0
-offset_top = 65.0
-offset_right = 67.0
-offset_bottom = 99.0
-text = "GUN"
 
 [node name="Weapon_Store" type="Area2D" parent="."]
 position = Vector2(344, 171)
@@ -162,13 +59,13 @@ expand_mode = 1
 position = Vector2(2.5, -8)
 shape = SubResource("RectangleShape2D_cpag2")
 
-[node name="Encyclopedia2" type="Area2D" parent="."]
-position = Vector2(401, 115)
+[node name="Encyclopedia" type="Area2D" parent="."]
+position = Vector2(344, 115)
 scale = Vector2(0.2492576, 0.25)
 script = ExtResource("2_jda31")
 target_scene = 5
 
-[node name="Borders" type="TextureRect" parent="Encyclopedia2"]
+[node name="Borders" type="TextureRect" parent="Encyclopedia"]
 modulate = Color(0, 0, 0, 1)
 offset_left = -96.2859
 offset_top = -108.0
@@ -179,7 +76,7 @@ pivot_offset = Vector2(102.5, 102.5)
 texture = ExtResource("4_cpag2")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="Encyclopedia2"]
+[node name="TextureRect" type="TextureRect" parent="Encyclopedia"]
 offset_left = -97.0
 offset_top = -109.0
 offset_right = 103.0
@@ -187,6 +84,6 @@ offset_bottom = 91.0
 texture = ExtResource("4_cpag2")
 expand_mode = 1
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Encyclopedia2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Encyclopedia"]
 position = Vector2(2.5, -8)
 shape = SubResource("RectangleShape2D_cpag2")

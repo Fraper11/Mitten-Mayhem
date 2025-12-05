@@ -1,15 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgme2wc6oy8xb"]
+[gd_scene load_steps=16 format=3 uid="uid://dgme2wc6oy8xb"]
 
 [ext_resource type="Script" uid="uid://boauka0rkcxvy" path="res://Scripts/exp_currency_test.gd" id="1_qigve"]
-[ext_resource type="Texture2D" uid="uid://hit6x7tlmuxj" path="res://Assets/exp02.png" id="2_o3nse"]
-[ext_resource type="Texture2D" uid="uid://ca31b7avtflht" path="res://Assets/money01.png" id="3_gohdl"]
 [ext_resource type="Script" uid="uid://dx4onhidvcliq" path="res://Scripts/timecontrol.gd" id="4_mvagk"]
-[ext_resource type="Texture2D" uid="uid://c3f00oi7gypo7" path="res://Assets/clock01.png" id="5_y6buv"]
 [ext_resource type="Texture2D" uid="uid://qslhfcc6e2lw" path="res://Assets/EMclpointer01.png" id="6_pus01"]
 [ext_resource type="Texture2D" uid="uid://b0ff7igek3suu" path="res://Assets/Mclpointer01.png" id="7_usbst"]
 [ext_resource type="Texture2D" uid="uid://dfml8l5tv15dm" path="res://Assets/Eclpointer01.png" id="8_dx5y2"]
+[ext_resource type="Texture2D" uid="uid://db1r7pm4nqkqb" path="res://Assets/Meters/dangerm03.png" id="9_dx5y2"]
 [ext_resource type="Texture2D" uid="uid://bs7qi5ke528s4" path="res://Assets/Nclpoint01.png" id="9_n4xhf"]
+[ext_resource type="Texture2D" uid="uid://bnq1kfd8auoo0" path="res://Assets/Meters/dmTop01.png" id="9_pus01"]
+[ext_resource type="Script" uid="uid://do8j2ouiwlb22" path="res://Scenes/crabmeter.gd" id="9_usbst"]
+[ext_resource type="Texture2D" uid="uid://bbtcasydkejr" path="res://Assets/Meters/dmMiddle01.png" id="10_usbst"]
 [ext_resource type="Texture2D" uid="uid://c3xa2n731gwd8" path="res://Assets/Meters/board01.png" id="10_y6buv"]
+[ext_resource type="Texture2D" uid="uid://1o0g1ipj8lsh" path="res://Assets/Meters/dmbottom01.png" id="11_dx5y2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_usbst"]
+font_size = 7
+font_color = Color(3.6161753e-05, 0.0013174457, 0.0035881836, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dx5y2"]
+font_size = 7
+font_color = Color(0.016765147, 0.000114521856, 0.014641636, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4xhf"]
+font_size = 7
+font_color = Color(0, 0, 0, 1)
 
 [node name="ExpCurrencyTest" type="Control"]
 z_index = 100
@@ -17,125 +31,116 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -6.0
+offset_right = -12.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_qigve")
 metadata/_edit_use_anchors_ = true
 
-[node name="LvExpBar" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 0
-offset_left = 2.0
-offset_top = 1.0
-offset_right = 42.0
-offset_bottom = 41.0
+[node name="Board01" type="Sprite2D" parent="."]
+position = Vector2(189, 87)
+scale = Vector2(2.706828, 2.5242734)
+texture = ExtResource("10_y6buv")
 
-[node name="TextureRect" type="TextureRect" parent="LvExpBar"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 104.61539
-offset_bottom = 40.0
-grow_horizontal = 2
-scale = Vector2(1.5600195, 1.44)
-texture = ExtResource("2_o3nse")
-expand_mode = 3
+[node name="currency" type="Label" parent="Board01"]
+offset_left = -33.0
+offset_top = 9.0
+offset_right = 5.0
+offset_bottom = 32.0
+label_settings = SubResource("LabelSettings_usbst")
 
-[node name="Level" type="Label" parent="LvExpBar"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 8.0
-offset_top = 21.0
-offset_right = 48.0
-offset_bottom = 44.0
-grow_horizontal = 2
-scale = Vector2(0.8, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Lv: 1"
+[node name="Level" type="Label" parent="Board01"]
+offset_left = -56.0
+offset_top = -19.5
+offset_right = -35.5
+offset_bottom = 3.5
+label_settings = SubResource("LabelSettings_dx5y2")
 
-[node name="Experience" type="Label" parent="LvExpBar"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 61.0
-offset_top = 22.0
-offset_right = 132.0
-offset_bottom = 45.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "exp: 1/10"
+[node name="Experience" type="Label" parent="Board01"]
+offset_left = -29.5
+offset_top = -17.5
+offset_right = 6.0
+offset_bottom = 5.5
+label_settings = SubResource("LabelSettings_n4xhf")
 
-[node name="CurrencyBar" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 0
-offset_left = 26.0
-offset_top = 56.0
-offset_right = 66.0
-offset_bottom = 96.0
-
-[node name="TextureRect" type="TextureRect" parent="CurrencyBar"]
-layout_mode = 0
-offset_left = -12.0
-offset_top = -3.0
-offset_right = 116.0
-offset_bottom = 37.0
-scale = Vector2(1.24, 1.1600003)
-texture = ExtResource("3_gohdl")
-expand_mode = 3
-
-[node name="Currency" type="Label" parent="CurrencyBar"]
-layout_mode = 1
-offset_left = 41.0
-offset_top = 7.0
-offset_right = 88.0
-offset_bottom = 30.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Coins:"
-
-[node name="timechange" type="Node2D" parent="."]
-position = Vector2(46, 124.00001)
-scale = Vector2(0.07999022, 0.07999999)
+[node name="timechange" type="Node2D" parent="Board01"]
+position = Vector2(43.999992, 2.5)
+scale = Vector2(0.06408438, 0.06125713)
 script = ExtResource("4_mvagk")
 
-[node name="Clock01" type="Sprite2D" parent="timechange"]
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("5_y6buv")
-
-[node name="EMclpointer01" type="Sprite2D" parent="timechange"]
+[node name="EMclpointer01" type="Sprite2D" parent="Board01/timechange"]
 position = Vector2(70, 0)
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(2, 2)
 texture = ExtResource("6_pus01")
 
-[node name="Mclpointer01" type="Sprite2D" parent="timechange"]
-visible = false
+[node name="Mclpointer01" type="Sprite2D" parent="Board01/timechange"]
 position = Vector2(0, 70)
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(2, 2)
 texture = ExtResource("7_usbst")
 
-[node name="Eclpointer01" type="Sprite2D" parent="timechange"]
-visible = false
+[node name="Eclpointer01" type="Sprite2D" parent="Board01/timechange"]
 position = Vector2(-69.99994, 0)
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(2, 2)
 texture = ExtResource("8_dx5y2")
 
-[node name="Nclpoint01" type="Sprite2D" parent="timechange"]
-visible = false
+[node name="Nclpoint01" type="Sprite2D" parent="Board01/timechange"]
 position = Vector2(0, -70)
+scale = Vector2(2, 2)
 texture = ExtResource("9_n4xhf")
 
-[node name="Label" type="Label" parent="timechange"]
+[node name="Label" type="Label" parent="Board01/timechange"]
 offset_left = -450.055
 offset_top = 399.99997
 offset_right = 409.945
 offset_bottom = 809.0
 theme_override_font_sizes/font_size = 300
 
-[node name="Board01" type="Sprite2D" parent="."]
-position = Vector2(278, 37)
-texture = ExtResource("10_y6buv")
+[node name="Dangerm02" type="Sprite2D" parent="."]
+position = Vector2(414, 89)
+scale = Vector2(2, 2)
+texture = ExtResource("9_dx5y2")
+script = ExtResource("9_usbst")
+
+[node name="Dmbottom01" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, 15.5)
+texture = ExtResource("11_dx5y2")
+
+[node name="DmMiddle01" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, 9.5)
+texture = ExtResource("10_usbst")
+
+[node name="DmMiddle02" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, 4.5)
+texture = ExtResource("10_usbst")
+
+[node name="DmMiddle03" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, -0.5)
+texture = ExtResource("10_usbst")
+
+[node name="DmMiddle04" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, -5.5)
+texture = ExtResource("10_usbst")
+
+[node name="DmMiddle05" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, -10.5)
+texture = ExtResource("10_usbst")
+
+[node name="DmMiddle06" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, -15.5)
+texture = ExtResource("10_usbst")
+
+[node name="DmMiddle07" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, -20.5)
+texture = ExtResource("10_usbst")
+
+[node name="DmMiddle08" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, -25.5)
+texture = ExtResource("10_usbst")
+
+[node name="DmTop01" type="Sprite2D" parent="Dangerm02"]
+position = Vector2(-0.5, -31.5)
+texture = ExtResource("9_pus01")

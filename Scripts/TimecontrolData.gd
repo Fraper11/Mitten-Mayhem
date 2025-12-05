@@ -13,6 +13,8 @@ func next_phase():
 		
 func skip():
 	actionnow=0
+	if (phase_of_day!=0):
+		EnemySpawner.spawn_crab(1)
 	next_phase()
 
 func action():

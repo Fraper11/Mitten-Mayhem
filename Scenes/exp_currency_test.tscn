@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dgme2wc6oy8xb"]
+[gd_scene load_steps=11 format=3 uid="uid://dgme2wc6oy8xb"]
 
 [ext_resource type="Script" uid="uid://boauka0rkcxvy" path="res://Scripts/exp_currency_test.gd" id="1_qigve"]
 [ext_resource type="Texture2D" uid="uid://hit6x7tlmuxj" path="res://Assets/exp02.png" id="2_o3nse"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b0ff7igek3suu" path="res://Assets/Mclpointer01.png" id="7_usbst"]
 [ext_resource type="Texture2D" uid="uid://dfml8l5tv15dm" path="res://Assets/Eclpointer01.png" id="8_dx5y2"]
 [ext_resource type="Texture2D" uid="uid://bs7qi5ke528s4" path="res://Assets/Nclpoint01.png" id="9_n4xhf"]
+[ext_resource type="Texture2D" uid="uid://c3xa2n731gwd8" path="res://Assets/Meters/board01.png" id="10_y6buv"]
 
 [node name="ExpCurrencyTest" type="Control"]
 z_index = 100
@@ -134,3 +135,7 @@ offset_top = 399.99997
 offset_right = 409.945
 offset_bottom = 809.0
 theme_override_font_sizes/font_size = 300
+
+[node name="Board01" type="Sprite2D" parent="."]
+position = Vector2(278, 37)
+texture = ExtResource("10_y6buv")

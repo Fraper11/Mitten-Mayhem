@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dt4skcr58o22s"]
+[gd_scene load_steps=7 format=3 uid="uid://dt4skcr58o22s"]
 
 [ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="1_gbig2"]
 [ext_resource type="Script" path="res://Scripts/switchSceneInteractables.gd" id="1_gkd5v"]
@@ -9,6 +9,9 @@ size = Vector2(260, 73)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_gbig2"]
 specular_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkd5v"]
+size = Vector2(230, 366)
 
 [node name="Deposit" type="Node2D"]
 
@@ -95,3 +98,12 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Door
 Click to go Back!"
+
+[node name="Torture" type="Area2D" parent="."]
+position = Vector2(330, 327)
+script = ExtResource("1_gbig2")
+target_scene = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torture"]
+position = Vector2(40, 46)
+shape = SubResource("RectangleShape2D_gkd5v")

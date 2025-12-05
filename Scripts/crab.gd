@@ -14,4 +14,5 @@ func _on_mouse_clicked_left(viewport, event, shape_idx):
 func die ():
 	PlayerData.add_crab_to_inventory(1)
 	PlayerData.add_exp(100)
+	CrabData.addCrab(-1)
 	queue_free()

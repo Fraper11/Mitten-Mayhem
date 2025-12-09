@@ -1,21 +1,40 @@
 {
 	
 	"PAGE_001": {
-		"id": 2,
+		"id": 1,
 		"title": "The Chinese Mitten Crab",
 		"text": "The Chinese Mitten Crab is a predatory crab known for its hairy claws and its invasive intent. It lives in fresh waters.",
 		"image": "res://Assets/Crab01.png"
 	},
 	"PAGE_002": {
-		"id": 1,
-		"title": "Sea Snail",
-		"text": "Sea snails are small marine gastropods found in shallow waters. They have spiral shells and move slowly.",
+		"id": 2,
+		"title": "Taxonomy",
+		"text": "A decapod crustacean from the family Varunidae, adapted to both freshwater and saltwater environments.",
 		"image": ""
 	},
 	"PAGE_003": {
 		"id": 3,
-		"title": "Fishing Boat",
-		"text": "Fishing boats allow fishermen to access deeper oceans. They vary in size and purpose.",
+		"title": "Lifecycle",
+		"text": "The Chinese Mitten Crab is catadromous species, the adults migrate to the ocean to spawn, larvae grow in saltwater, and juveniles travel far upstream into freshwater before returning to the sea to reproduce.",
+		"image": ""
+	},
+	"PAGE_004": {
+		"id": 4,
+		"title": "Invasive Traits",
+		"text": "Highly mobile, climbs surfaces, burrows into banks, tolerates many environments, and females can carry up to one million eggs.",
+		"image": ""
+	},
+	"PAGE_005": {
+		"id": 5,
+		"title": "Ecological Impact",
+		"text": "Competes with native species, eats fish eggs and plants, and damages habitats through burrowing, altering entire river systems.",
+		"image": ""
+	},
+	"PAGE_006": {
+		"id": 6,
+		"title": "Human Concern",
+		"text": "May carry lung parasites if eaten raw. Large migrations can cause road blockages, drain clogs, and urban disturbances.",
 		"image": ""
 	}
+	
 }

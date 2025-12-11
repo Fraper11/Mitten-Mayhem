@@ -1,0 +1,50 @@
+[gd_scene load_steps=13 format=3 uid="uid://cbvlmy457s5uw"]
+
+[ext_resource type="Texture2D" uid="uid://bbixmvqb56ctu" path="res://Assets/ZoneGUI/empty.png" id="1_3e53g"]
+[ext_resource type="Script" uid="uid://bde67a0b4veqe" path="res://Scripts/zone.gd" id="1_dvusg"]
+[ext_resource type="Texture2D" uid="uid://cwlmkamftmwkq" path="res://Assets/ZoneGUI/full.png" id="2_fpucl"]
+[ext_resource type="Texture2D" uid="uid://bqluy7l4kvcoj" path="res://Assets/ZoneGUI/Set.png" id="3_dvusg"]
+[ext_resource type="Texture2D" uid="uid://d0uwcg1dpab07" path="res://Assets/ZoneGUI/CollectGreen.png" id="4_bqwps"]
+[ext_resource type="Texture2D" uid="uid://c80lmdltnhjpw" path="res://Assets/ZoneGUI/CollectYellow.png" id="4_mgg6s"]
+[ext_resource type="Texture2D" uid="uid://uy6xux743gul" path="res://Assets/ZoneGUI/CollectYellowPressed.png" id="5_mgg6s"]
+[ext_resource type="Texture2D" uid="uid://drglqgf16af2x" path="res://Assets/ZoneGUI/CollectGreenPressed.png" id="5_vem0h"]
+[ext_resource type="Texture2D" uid="uid://ddlu2451unbft" path="res://Assets/ZoneGUI/CollectYellowHover.png" id="6_4ixsr"]
+[ext_resource type="Texture2D" uid="uid://ckth6omrtl1w1" path="res://Assets/ZoneGUI/CollectGreenHover.png" id="6_tofxm"]
+[ext_resource type="Texture2D" uid="uid://cufn4gecnv7vc" path="res://Assets/ZoneGUI/SetPressed.png" id="8_lvxad"]
+[ext_resource type="Texture2D" uid="uid://cvfsibfu8vapy" path="res://Assets/ZoneGUI/SetHover.png" id="9_uj7rx"]
+
+[node name="Zone" type="Node2D"]
+script = ExtResource("1_dvusg")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+step = 0.0
+fill_mode = 4
+texture_under = ExtResource("1_3e53g")
+texture_progress = ExtResource("2_fpucl")
+
+[node name="CollectFull" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_bqwps")
+texture_pressed = ExtResource("5_vem0h")
+texture_hover = ExtResource("6_tofxm")
+
+[node name="CollectEarly" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("4_mgg6s")
+texture_pressed = ExtResource("5_mgg6s")
+texture_hover = ExtResource("6_4ixsr")
+
+[node name="Set" type="TextureButton" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("3_dvusg")
+texture_pressed = ExtResource("8_lvxad")
+texture_hover = ExtResource("9_uj7rx")
+
+[connection signal="button_up" from="CollectFull" to="." method="_on_any_collect_button_up"]
+[connection signal="button_up" from="CollectEarly" to="." method="_on_any_collect_button_up"]
+[connection signal="button_up" from="Set" to="." method="_on_set_button_up"]

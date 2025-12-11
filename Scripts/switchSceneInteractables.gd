@@ -31,3 +31,7 @@ func _on_mouse_clicked_left(viewport, event, shape_idx):
 func on_timeout():
 	print("Ho aspettato")
 	WeaponDeposit.visible = true
+
+
+func _on_skip_action_button_up() -> void:
+	pass # Replace with function body.

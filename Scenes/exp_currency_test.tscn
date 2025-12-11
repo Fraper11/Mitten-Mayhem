@@ -26,6 +26,7 @@ font_size = 7
 font_color = Color(0, 0, 0, 1)
 
 [node name="ExpCurrencyTest" type="Control"]
+visible = false
 z_index = 100
 layout_mode = 3
 anchors_preset = 15

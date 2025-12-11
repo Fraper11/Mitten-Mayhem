@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MittenMayhem"
-run/main_scene="uid://conelp22qptag"
+run/main_scene="uid://3sxl843a345j"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
@@ -34,6 +34,10 @@ CrabData="*res://Scripts/crab_data.gd"
 
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="MittenMayhem"
 
 [input]
 

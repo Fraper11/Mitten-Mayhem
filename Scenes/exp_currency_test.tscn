@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://dgme2wc6oy8xb"]
+[gd_scene load_steps=27 format=3 uid="uid://dgme2wc6oy8xb"]
 
 [ext_resource type="Script" uid="uid://boauka0rkcxvy" path="res://Scripts/exp_currency_test.gd" id="1_qigve"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="3_dx5y2"]
 [ext_resource type="Script" uid="uid://dx4onhidvcliq" path="res://Scripts/timecontrol.gd" id="4_mvagk"]
 [ext_resource type="Texture2D" uid="uid://qslhfcc6e2lw" path="res://Assets/EMclpointer01.png" id="6_pus01"]
 [ext_resource type="Texture2D" uid="uid://b0ff7igek3suu" path="res://Assets/Mclpointer01.png" id="7_usbst"]
@@ -8,22 +9,57 @@
 [ext_resource type="Texture2D" uid="uid://db1r7pm4nqkqb" path="res://Assets/Meters/dangerm03.png" id="9_dx5y2"]
 [ext_resource type="Texture2D" uid="uid://bs7qi5ke528s4" path="res://Assets/Nclpoint01.png" id="9_n4xhf"]
 [ext_resource type="Texture2D" uid="uid://bnq1kfd8auoo0" path="res://Assets/Meters/dmTop01.png" id="9_pus01"]
-[ext_resource type="Script" uid="uid://do8j2ouiwlb22" path="res://Scenes/crabmeter.gd" id="9_usbst"]
+[ext_resource type="Script" uid="uid://do8j2ouiwlb22" path="res://Scripts/crabmeter.gd" id="9_usbst"]
 [ext_resource type="Texture2D" uid="uid://bbtcasydkejr" path="res://Assets/Meters/dmMiddle01.png" id="10_usbst"]
 [ext_resource type="Texture2D" uid="uid://c3xa2n731gwd8" path="res://Assets/Meters/board01.png" id="10_y6buv"]
 [ext_resource type="Texture2D" uid="uid://1o0g1ipj8lsh" path="res://Assets/Meters/dmbottom01.png" id="11_dx5y2"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_usbst"]
-font_size = 7
-font_color = Color(3.6161753e-05, 0.0013174457, 0.0035881836, 1)
+[ext_resource type="Texture2D" uid="uid://bl6jb3bnpuuia" path="res://Assets/Icons/mail01.png" id="14_n4xhf"]
+[ext_resource type="Texture2D" uid="uid://cmbpgbmsjdnxg" path="res://Assets/exp01.png" id="15_7vj57"]
+[ext_resource type="Texture2D" uid="uid://ca31b7avtflht" path="res://Assets/money01.png" id="16_y3rl1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dx5y2"]
-font_size = 7
-font_color = Color(0.016765147, 0.000114521856, 0.014641636, 1)
+font = ExtResource("3_dx5y2")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j61rs"]
+font = ExtResource("3_dx5y2")
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_n4xhf"]
-font_size = 7
+font = ExtResource("3_dx5y2")
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx5y2"]
+bg_color = Color(0.39215687, 0.25882354, 0.18431373, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vj57"]
+font_size = 200
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j61rs"]
+bg_color = Color(0.88235295, 0.69411767, 0.41568628, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vj57"]
+texture = ExtResource("14_n4xhf")
+axis_stretch_horizontal = 2
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y3rl1"]
+font = ExtResource("3_dx5y2")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeql8"]
+texture = ExtResource("15_7vj57")
+axis_stretch_horizontal = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b8l2p"]
+texture = ExtResource("16_y3rl1")
+axis_stretch_horizontal = 2
 
 [node name="ExpCurrencyTest" type="Control"]
 z_index = 100
@@ -41,66 +77,9 @@ mouse_filter = 2
 script = ExtResource("1_qigve")
 metadata/_edit_use_anchors_ = true
 
-[node name="Board01" type="Sprite2D" parent="."]
-position = Vector2(189, 87)
-scale = Vector2(2.706828, 2.5242734)
-texture = ExtResource("10_y6buv")
-
-[node name="currency" type="Label" parent="Board01"]
-offset_left = -33.0
-offset_top = 9.0
-offset_right = 5.0
-offset_bottom = 32.0
-label_settings = SubResource("LabelSettings_usbst")
-
-[node name="Level" type="Label" parent="Board01"]
-offset_left = -56.0
-offset_top = -19.5
-offset_right = -35.5
-offset_bottom = 3.5
-label_settings = SubResource("LabelSettings_dx5y2")
-
-[node name="Experience" type="Label" parent="Board01"]
-offset_left = -29.5
-offset_top = -17.5
-offset_right = 6.0
-offset_bottom = 5.5
-label_settings = SubResource("LabelSettings_n4xhf")
-
-[node name="timechange" type="Node2D" parent="Board01"]
-position = Vector2(43.999992, 2.5)
-scale = Vector2(0.06408438, 0.06125713)
-script = ExtResource("4_mvagk")
-
-[node name="EMclpointer01" type="Sprite2D" parent="Board01/timechange"]
-position = Vector2(70, 0)
-scale = Vector2(2, 2)
-texture = ExtResource("6_pus01")
-
-[node name="Mclpointer01" type="Sprite2D" parent="Board01/timechange"]
-position = Vector2(0, 70)
-scale = Vector2(2, 2)
-texture = ExtResource("7_usbst")
-
-[node name="Eclpointer01" type="Sprite2D" parent="Board01/timechange"]
-position = Vector2(-69.99994, 0)
-scale = Vector2(2, 2)
-texture = ExtResource("8_dx5y2")
-
-[node name="Nclpoint01" type="Sprite2D" parent="Board01/timechange"]
-position = Vector2(0, -70)
-scale = Vector2(2, 2)
-texture = ExtResource("9_n4xhf")
-
-[node name="Label" type="Label" parent="Board01/timechange"]
-offset_left = -450.055
-offset_top = 399.99997
-offset_right = 409.945
-offset_bottom = 809.0
-theme_override_font_sizes/font_size = 300
-
 [node name="Dangerm02" type="Sprite2D" parent="."]
-position = Vector2(414, 89)
+position = Vector2(104, 177)
+rotation = 1.5707964
 scale = Vector2(2, 2)
 texture = ExtResource("9_dx5y2")
 script = ExtResource("9_usbst")
@@ -144,3 +123,221 @@ texture = ExtResource("10_usbst")
 [node name="DmTop01" type="Sprite2D" parent="Dangerm02"]
 position = Vector2(-0.5, -31.5)
 texture = ExtResource("9_pus01")
+
+[node name="Board" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Icon" type="Sprite2D" parent="Board"]
+position = Vector2(152, 72)
+scale = Vector2(2, 2)
+texture = ExtResource("10_y6buv")
+
+[node name="Level" type="Label" parent="Board"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 38.0
+offset_right = 92.0
+offset_bottom = 61.0
+label_settings = SubResource("LabelSettings_dx5y2")
+
+[node name="currency" type="Label" parent="Board"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.125
+anchor_right = 0.125
+anchor_bottom = 0.125
+offset_left = 86.0
+offset_top = 90.0
+offset_right = 87.0
+offset_bottom = 101.0
+label_settings = SubResource("LabelSettings_j61rs")
+metadata/_edit_use_anchors_ = true
+
+[node name="Experience" type="Label" parent="Board"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.125
+anchor_right = 0.1
+anchor_bottom = 0.125
+offset_left = 93.0
+offset_top = 37.0
+offset_right = 128.5
+offset_bottom = 60.0
+label_settings = SubResource("LabelSettings_n4xhf")
+metadata/_edit_use_anchors_ = true
+
+[node name="timechange" type="Node2D" parent="Board"]
+position = Vector2(239.99998, 77)
+scale = Vector2(0.122, 0.122)
+script = ExtResource("4_mvagk")
+
+[node name="EMclpointer01" type="Sprite2D" parent="Board/timechange"]
+position = Vector2(70, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("6_pus01")
+
+[node name="Mclpointer01" type="Sprite2D" parent="Board/timechange"]
+position = Vector2(0, 70)
+scale = Vector2(2, 2)
+texture = ExtResource("7_usbst")
+
+[node name="Eclpointer01" type="Sprite2D" parent="Board/timechange"]
+position = Vector2(-69.99994, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("8_dx5y2")
+
+[node name="Nclpoint01" type="Sprite2D" parent="Board/timechange"]
+position = Vector2(0, -70)
+scale = Vector2(2, 2)
+texture = ExtResource("9_n4xhf")
+
+[node name="Days" type="Label" parent="Board/timechange"]
+offset_left = -385.2458
+offset_top = 508.19678
+offset_right = 686.7542
+offset_bottom = 781.1968
+scale = Vector2(0.7416696, 2.393419)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dx5y2")
+label_settings = SubResource("LabelSettings_7vj57")
+
+[node name="Popups" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Page_unlocked" type="Control" parent="Popups"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Popups/Page_unlocked"]
+position = Vector2(452, 608)
+texture = ExtResource("14_n4xhf")
+
+[node name="Panel" type="Panel" parent="Popups/Page_unlocked"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -62.0
+offset_right = 150.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j61rs")
+
+[node name="Panel2" type="Panel" parent="Popups/Page_unlocked"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -146.0
+offset_top = -59.0
+offset_right = -105.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7vj57")
+
+[node name="Label" type="Label" parent="Popups/Page_unlocked"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = -10.0
+offset_right = 142.0
+offset_bottom = 13.0
+grow_horizontal = 2
+text = "You Unlocked a New Page!"
+label_settings = SubResource("LabelSettings_y3rl1")
+
+[node name="Exp_Earned" type="Control" parent="Popups"]
+anchors_preset = 0
+offset_left = -13.0
+offset_top = 10.0
+offset_right = 27.0
+offset_bottom = 50.0
+
+[node name="Panel" type="Panel" parent="Popups/Exp_Earned"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -62.0
+offset_right = 150.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_aeql8")
+
+[node name="Label" type="Label" parent="Popups/Exp_Earned"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_top = -17.0
+offset_right = 241.0
+offset_bottom = 6.0
+grow_horizontal = 2
+text = "You Gained Exp"
+label_settings = SubResource("LabelSettings_y3rl1")
+
+[node name="Coins_Earned" type="Control" parent="Popups"]
+anchors_preset = 0
+offset_left = -13.0
+offset_top = 10.0
+offset_right = 27.0
+offset_bottom = 50.0
+
+[node name="Panel" type="Panel" parent="Popups/Coins_Earned"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -85.0
+offset_right = 155.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_b8l2p")
+
+[node name="Label" type="Label" parent="Popups/Coins_Earned"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_top = -17.0
+offset_right = 241.0
+offset_bottom = 6.0
+grow_horizontal = 2
+text = "You Gained Coins"
+label_settings = SubResource("LabelSettings_y3rl1")

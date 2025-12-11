@@ -1,13 +1,134 @@
-[gd_scene format=3 uid="uid://bsswno5q7k73n"]
+[gd_scene load_steps=16 format=3 uid="uid://bsswno5q7k73n"]
+
+[ext_resource type="Script" uid="uid://cu335371v1m8k" path="res://Scripts/torture_room.gd" id="1_tj4ts"]
+[ext_resource type="Texture2D" uid="uid://vchharv8xhka" path="res://Assets/Locations/Crab termination room.PNG" id="2_da8q1"]
+[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="3_prlah"]
+[ext_resource type="Texture2D" uid="uid://ch361jaqkqjba" path="res://Assets/Icons/x03.png" id="4_da8q1"]
+[ext_resource type="Texture2D" uid="uid://bo8gvm1jgbrue" path="res://Assets/Icons/x02.png" id="5_da8q1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vgvi3"]
+texture = ExtResource("3_prlah")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_prlah"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1luob"]
+texture = ExtResource("4_da8q1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_prlah"]
+font_size = 72
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgvi3"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_da8q1"]
+a = Vector2(260, -235)
+b = Vector2(257, 266)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vgvi3"]
+a = Vector2(262, -230)
+b = Vector2(-307, -233)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1luob"]
+a = Vector2(-307, 267)
+b = Vector2(262, 266)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_50x7b"]
+a = Vector2(299, -234)
+b = Vector2(299, 272)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da8q1"]
+size = Vector2(557, 400)
 
 [node name="TortureRoom" type="Node2D"]
+script = ExtResource("1_tj4ts")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(574.5, 322.5)
+scale = Vector2(0.4503906, 0.4479167)
+texture = ExtResource("2_da8q1")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = -9.0
+offset_top = 555.0
+offset_right = 1156.0
+offset_bottom = 655.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 500
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="Panel" parent="PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_vgvi3")
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/TextureRect"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_prlah")
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+[node name="TextureRect2" type="Panel" parent="PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_1luob")
+
+[node name="Crab_Inventory" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "X"
+label_settings = SubResource("LabelSettings_prlah")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1067.0
+offset_top = 9.999998
+offset_right = 1193.0
+offset_bottom = 88.0
+grow_horizontal = 0
+scale = Vector2(0.57575756, 0.64444447)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vgvi3")
+icon = ExtResource("5_da8q1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Torture_Zone" type="StaticBody2D" parent="."]
+position = Vector2(236, 260)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torture_Zone"]
+position = Vector2(363, 55)
+shape = SubResource("SegmentShape2D_da8q1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Torture_Zone"]
+position = Vector2(363, 55)
+shape = SubResource("SegmentShape2D_vgvi3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Torture_Zone"]
+position = Vector2(363, 55)
+shape = SubResource("SegmentShape2D_1luob")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Torture_Zone"]
+position = Vector2(-242, 55)
+shape = SubResource("SegmentShape2D_50x7b")
+
+[node name="Spawn_area" type="Area2D" parent="Torture_Zone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torture_Zone/Spawn_area"]
+position = Vector2(337.5, 35)
+shape = SubResource("RectangleShape2D_da8q1")
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/TextureRect/Button" to="." method="_on_crab_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_close_torture_room_button_pressed"]
+[connection signal="input_event" from="Torture_Zone/Spawn_area" to="." method="_on_spawn_area_input_event"]

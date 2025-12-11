@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://i8v5cighlyn"]
+[gd_scene load_steps=5 format=3 uid="uid://c6eltd0d8c00v"]
 
-[ext_resource type="Script" uid="uid://bnoshf5b8hhj3" path="res://Scenes/encyclopedia_view.gd" id="1_kfvci"]
-[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="2_8svmq"]
+[ext_resource type="Script" uid="uid://bnoshf5b8hhj3" path="res://Scripts/encyclopedia_view.gd" id="1_kfvci"]
+[ext_resource type="Texture2D" uid="uid://be2nricanp3jc" path="res://Assets/Icons/x01.png" id="2_8svmq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8svmq"]
 bg_color = Color(0.3137255, 0.45882353, 0.4862745, 1)
@@ -45,15 +45,27 @@ layout_mode = 2
 
 [node name="Page1" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/ButtonContainer"]
 layout_mode = 2
-text = "Page#1"
+text = "#1The Chinese Mitten Crab"
 
 [node name="Page2" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/ButtonContainer"]
 layout_mode = 2
-text = "Page#2"
+text = "#2Taxonomy"
 
 [node name="Page3" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/ButtonContainer"]
 layout_mode = 2
-text = "Page#3"
+text = "#3Lifecycle"
+
+[node name="Page4" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/ButtonContainer"]
+layout_mode = 2
+text = "#4Invasive Traits"
+
+[node name="Page5" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/ButtonContainer"]
+layout_mode = 2
+text = "#5Ecological Impact"
+
+[node name="Page6" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/ButtonContainer"]
+layout_mode = 2
+text = "#6Human Concern"
 
 [node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer/ButtonContainer"]
 custom_minimum_size = Vector2(0, 5)

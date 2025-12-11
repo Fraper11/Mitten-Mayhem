@@ -13,7 +13,7 @@ config_version=5
 config/name="MittenMayhem"
 run/main_scene="uid://conelp22qptag"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://Assets/icon.svg"
+config/icon="uid://bhwqx0rk74s72"
 
 [autoload]
 
@@ -24,16 +24,18 @@ FadeLayer="*res://Scenes/Fade_Layer.tscn"
 CursorMovement="*res://Scripts/cursorMovement.gd"
 PlayerData="*res://Scripts/playerData.gd"
 SceneLoader="*res://Scripts/sceneLoader.gd"
-SceneStorage="*res://Scripts/sceneStorage.gd"
 GlobalTimer="*res://Scripts/timer.gd"
 EncyclopediaDb="*res://Scripts/encyclopedia_DB.gd"
 TimecontrolData="*res://Scripts/TimecontrolData.gd"
 CrabData="*res://Scripts/crab_data.gd"
+SceneStorage="*res://Scripts/sceneStorage.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://dbfvlxcjn4ae6"
+window/quality/msaa_2d=1
 
 [input]
 

@@ -1,6 +1,6 @@
 extends Node
 
-var previous_scene_id = SceneStorage.SceneID.MAIN
+var previous_scene_id = SceneStorage.SceneID.MAP
 
 func load_scene(scene_id: SceneStorage.SceneID):
 	previous_scene_id = SceneStorage.get_current_scene()

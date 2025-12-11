@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://d12lfckw2nk0l"]
+
+[ext_resource type="Texture2D" uid="uid://cffm2e0auow0e" path="res://Assets/Locations/laptop.PNG" id="1_3xxyo"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="2_ru4ub"]
+[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="3_liiam"]
+[ext_resource type="Texture2D" uid="uid://bo8gvm1jgbrue" path="res://Assets/Icons/x02.png" id="4_5amea"]
+[ext_resource type="Texture2D" uid="uid://bhwqx0rk74s72" path="res://Assets/Icons/Logo.png" id="5_jwsd0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hu745"]
+font = ExtResource("2_ru4ub")
+font_size = 17
+font_color = Color(0.8, 0.88235295, 0.73333335, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2ly8h"]
+font = ExtResource("2_ru4ub")
+font_size = 17
+font_color = Color(0.8, 0.88235295, 0.73333335, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hi2hl"]
+font = ExtResource("2_ru4ub")
+font_size = 17
+font_color = Color(0.8, 0.88235295, 0.73333335, 1)
+
+[node name="Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = ExtResource("1_3xxyo")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 52
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "CONGRATULATIONS, YOU UNLOCKED ALL OF THE PAGES! "
+label_settings = SubResource("LabelSettings_hu745")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "YOU ARE READY NOW TO \"TAKE CARE\" OF "
+label_settings = SubResource("LabelSettings_2ly8h")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "tHE CHINESE MITTEN CRABS"
+label_settings = SubResource("LabelSettings_hi2hl")
+horizontal_alignment = 1
+
+[node name="Panel" type="Sprite2D" parent="."]
+position = Vector2(560.00006, 395.99997)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="X02" type="Sprite2D" parent="."]
+position = Vector2(561, 394.62497)
+scale = Vector2(3.187501, 1.9765606)
+texture = ExtResource("4_5amea")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(577.00006, 137)
+scale = Vector2(1.5624995, 1.21875)
+texture = ExtResource("5_jwsd0")

@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnxj567dcc85w"]
+[gd_scene load_steps=10 format=3 uid="uid://73khkou43neu"]
 
 [ext_resource type="Script" uid="uid://b6gk44p1ti6ik" path="res://Scripts/weapon_deposit.gd" id="1_tuslq"]
-[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="3_00oru"]
+[ext_resource type="Texture2D" uid="uid://ch361jaqkqjba" path="res://Assets/Icons/x03.png" id="2_0lpic"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lpic"]
 bg_color = Color(0.48235294, 0.40392157, 0.20392157, 0.72156864)
@@ -38,6 +38,9 @@ bg_color = Color(0, 0, 0, 0.18039216)
 [sub_resource type="LabelSettings" id="LabelSettings_ls3mv"]
 font_size = 30
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls3mv"]
+bg_color = Color(0, 0, 0, 0)
 
 [node name="WeaponDeposit" type="Control"]
 layout_mode = 3
@@ -78,25 +81,25 @@ custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mo4ky")
 
-[node name="Sandal" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Sandal"
-
 [node name="CrabPounder" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "CrabPounder"
 
-[node name="Gun" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="ChunkySplatter" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Gun"
+text = "Chunky Splatter"
 
-[node name="Hammer" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="MomSandal" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Hammer"
+text = "Mom's Sandal"
+
+[node name="FrozenSlapper" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Frozen Slapper"
 
 [node name="Panel2" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 5)
@@ -164,12 +167,29 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Panel2" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Description"]
+custom_minimum_size = Vector2(-2.455, 31.745)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = 26.5
+offset_right = 670.0
+offset_bottom = 58.244995
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.24000001, 1.2012156)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ls3mv")
+
+[node name="Panel3" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Description"]
 custom_minimum_size = Vector2(0, 5)
 layout_mode = 0
-offset_left = 1.0
-offset_top = 179.0
-offset_right = 749.0
-offset_bottom = 184.0
+offset_left = -1.0
+offset_top = 183.0
+offset_right = 747.0
+offset_bottom = 188.0
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -181,9 +201,8 @@ offset_top = 9.0
 offset_right = -14.0
 offset_bottom = 58.0
 grow_horizontal = 0
-icon = ExtResource("3_00oru")
+icon = ExtResource("2_0lpic")
+icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Gun" to="." method="_on_gun_button_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Hammer" to="." method="_on_gun_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_close_weapon_storage_button_pressed"]

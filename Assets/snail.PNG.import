@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2liy750d0v6l"
-path="res://.godot/imported/whitefish.PNG-6b4c62c2b1751acdce256792f85aeab8.ctex"
+uid="uid://bku68e27im4fh"
+path="res://.godot/imported/snail.PNG-e09735a6e774f89c321c77cba9bd61d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/whitefish.PNG"
-dest_files=["res://.godot/imported/whitefish.PNG-6b4c62c2b1751acdce256792f85aeab8.ctex"]
+source_file="res://Assets/snail.PNG"
+dest_files=["res://.godot/imported/snail.PNG-e09735a6e774f89c321c77cba9bd61d7.ctex"]
 
 [params]
 

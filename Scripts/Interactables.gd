@@ -50,8 +50,10 @@ func _on_mouse_clicked_left(viewport, event, shape_idx):
 			if (action_cost):
 				TimecontrolData.action()
 				EnemySpawner.spawn_crab(crab_to_spawn)
-			PlayerData.add_exp(exp_to_add)
-			PlayerData.add_currency(currency_to_add)
+			if(exp_to_add >0):
+				PlayerData.add_exp(exp_to_add)
+			if(currency_to_add > 0):
+				PlayerData.add_currency(currency_to_add)
 			if (target_scene != SceneStorage.SceneID.NOTHING):
 				print("I'm Loading a New Scene")
 				SceneLoader.load_scene(target_scene)

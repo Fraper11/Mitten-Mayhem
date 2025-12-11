@@ -1,6 +1,6 @@
 extends Node2D
 func _process(delta: float) -> void:
-	$Label.text="%s day" %TimecontrolData.passed_day
+	$Days.text="Day: %s" %TimecontrolData.passed_day
 	$EMclpointer01.visible=false
 	$Mclpointer01.visible=false
 	$Eclpointer01.visible=false

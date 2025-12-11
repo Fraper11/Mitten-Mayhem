@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt4skcr58o22s"]
+[gd_scene load_steps=16 format=3 uid="uid://dt4skcr58o22s"]
 
 [ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="1_gbig2"]
-[ext_resource type="Script" path="res://Scripts/switchSceneInteractables.gd" id="1_gkd5v"]
-[ext_resource type="Texture2D" uid="uid://veyx4sihpyg3" path="res://Assets/storageroom.PNG" id="1_icsek"]
+[ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="1_gkd5v"]
+[ext_resource type="Texture2D" uid="uid://veyx4sihpyg3" path="res://Assets/Locations/storageroom.PNG" id="1_icsek"]
+[ext_resource type="Texture2D" uid="uid://dfted1hffsyit" path="res://Assets/Weapons/crabPounder.png" id="4_spexq"]
+[ext_resource type="Script" uid="uid://cyxosm8utot6r" path="res://Scripts/weapons_shelf.gd" id="5_dfkim"]
+[ext_resource type="Texture2D" uid="uid://ct7v4m8oqomgd" path="res://Assets/Weapons/chunkySplatter.png" id="6_yp2vn"]
+[ext_resource type="Texture2D" uid="uid://cdgrhwafotsbb" path="res://Assets/Weapons/momSandal.png" id="7_vxxbk"]
+[ext_resource type="Texture2D" uid="uid://d2liy750d0v6l" path="res://Assets/Weapons/frozenSlapper.png" id="8_w1q1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_icsek"]
 size = Vector2(260, 73)
@@ -13,28 +18,43 @@ specular_color = Color(0, 0, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkd5v"]
 size = Vector2(230, 366)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_spexq"]
+radius = 31.077393
+height = 90.673706
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dfkim"]
+radius = 56.008926
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yp2vn"]
+radius = 25.778564
+height = 93.68738
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vxxbk"]
+radius = 41.887024
+height = 178.08911
+
 [node name="Deposit" type="Node2D"]
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="Background" type="PanelContainer" parent="."]
 offset_right = 1153.0
 offset_bottom = 647.0
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+[node name="TextureRect" type="TextureRect" parent="Background"]
 layout_mode = 2
 texture = ExtResource("1_icsek")
 expand_mode = 1
 
-[node name="Deposit" type="Area2D" parent="."]
-position = Vector2(796, 389)
+[node name="GoBack" type="Area2D" parent="."]
+position = Vector2(576, 602)
 script = ExtResource("1_gkd5v")
-target_scene = 3
+target_scene = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deposit"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoBack"]
 position = Vector2(5.5, 8)
 shape = SubResource("RectangleShape2D_icsek")
 
-[node name="Borders" type="TextureRect" parent="Deposit"]
+[node name="Borders" type="TextureRect" parent="GoBack"]
 modulate = Color(0, 0, 0, 1)
 offset_left = -117.0
 offset_top = -31.0
@@ -43,7 +63,7 @@ offset_bottom = 47.0
 mouse_filter = 2
 texture = SubResource("CanvasTexture_gbig2")
 
-[node name="LightBlue" type="ColorRect" parent="Deposit"]
+[node name="LightBlue" type="ColorRect" parent="GoBack"]
 offset_left = -112.000015
 offset_top = -27.999996
 offset_right = 105.999985
@@ -51,59 +71,79 @@ offset_bottom = 45.000004
 mouse_filter = 2
 color = Color(0.095464595, 0.46801734, 0.4828999, 1)
 
-[node name="Label" type="Label" parent="Deposit"]
+[node name="Label" type="Label" parent="GoBack"]
 offset_left = -62.5
 offset_top = -24.5
 offset_right = 62.5
 offset_bottom = 24.5
-text = "Weapon Storage"
+text = "Go Back to the MAP"
 vertical_alignment = 2
-
-[node name="GoBack" type="Area2D" parent="."]
-position = Vector2(591, 585)
-script = ExtResource("1_gbig2")
-target_scene = 6
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GoBack"]
-position = Vector2(26, 21.5)
-shape = SubResource("RectangleShape2D_icsek")
-
-[node name="Border" type="ColorRect" parent="GoBack"]
-offset_left = -105.0
-offset_top = -17.0
-offset_right = 157.0
-offset_bottom = 63.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="LightBlue" type="ColorRect" parent="GoBack"]
-offset_left = -92.000015
-offset_top = -10.000027
-offset_right = 148.76
-offset_bottom = 57.715
-mouse_filter = 2
-color = Color(0.46699715, 0.2759016, 0.13497415, 1)
-
-[node name="Label" type="Label" parent="GoBack"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -41.0
-offset_top = 2.0
-offset_right = 84.0
-offset_bottom = 51.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Door
-Click to go Back!"
 
 [node name="Torture" type="Area2D" parent="."]
 position = Vector2(330, 327)
 script = ExtResource("1_gbig2")
-target_scene = 6
+target_scene = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torture"]
 position = Vector2(40, 46)
 shape = SubResource("RectangleShape2D_gkd5v")
+
+[node name="Weapons" type="Node2D" parent="."]
+
+[node name="Crabpounder" type="Area2D" parent="Weapons"]
+position = Vector2(718, 311)
+script = ExtResource("5_dfkim")
+weapon_name = "CRABPOUNDER"
+
+[node name="Icon" type="Sprite2D" parent="Weapons/Crabpounder"]
+rotation = -0.71778405
+scale = Vector2(3, 3)
+texture = ExtResource("4_spexq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapons/Crabpounder"]
+position = Vector2(-3, 1)
+rotation = -0.7396472
+shape = SubResource("CapsuleShape2D_spexq")
+
+[node name="Chunkysplatter" type="Area2D" parent="Weapons"]
+position = Vector2(800.00006, 497)
+script = ExtResource("5_dfkim")
+weapon_name = "CHUNKYSPLATTER"
+
+[node name="Icon" type="Sprite2D" parent="Weapons/Chunkysplatter"]
+scale = Vector2(5, 5)
+texture = ExtResource("6_yp2vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapons/Chunkysplatter"]
+position = Vector2(1.999939, 10)
+shape = SubResource("CircleShape2D_dfkim")
+
+[node name="Momsandal" type="Area2D" parent="Weapons"]
+position = Vector2(897.00006, 305)
+script = ExtResource("5_dfkim")
+weapon_name = "MOMSANDAL"
+
+[node name="Icon" type="Sprite2D" parent="Weapons/Momsandal"]
+rotation = -3.1415925
+scale = Vector2(3, -3)
+texture = ExtResource("7_vxxbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapons/Momsandal"]
+position = Vector2(4.999939, 1)
+rotation = 0.90360916
+shape = SubResource("CapsuleShape2D_yp2vn")
+
+[node name="Frozenslapper" type="Area2D" parent="Weapons"]
+position = Vector2(794.00006, 402)
+script = ExtResource("5_dfkim")
+weapon_name = "FROZENSLAPPER"
+
+[node name="Icon" type="Sprite2D" parent="Weapons/Frozenslapper"]
+rotation = -0.17042102
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("8_w1q1q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapons/Frozenslapper"]
+position = Vector2(0.99993896, 1)
+rotation = 1.3674328
+shape = SubResource("CapsuleShape2D_vxxbk")

@@ -1,11 +1,10 @@
 extends Node
 
 
-@onready var sandal_button = $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Sandal
-@onready var crabpounder_button = $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/CrabPounder
-@onready var gun_button = $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Gun
-@onready var hammer_button = $PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Hammer
-
+@onready var crab_pounder_button = %CrabPounder
+@onready var chunky_splatter_button = %ChunkySplatter
+@onready var mom_Sandal_button = %MomSandal
+@onready var frozen_slapper_button = %FrozenSlapper
 
 @onready var icon_panel = $PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Upper/Icon
 @onready var description_label = $PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Description/DescriptionLabel
@@ -15,41 +14,47 @@ extends Node
 
 var weapons_data = {}
 
+
 func _ready() -> void:
-	self.visible = false
 	PlayerData.weapon_unlocked.connect(Callable(self, "_on_weapon_unlocked"))
-	
 	weapons_data = {
 		"CRABPOUNDER": {
-			"button": crabpounder_button,
-			"texture": preload("res://Assets/weapon00.png"),
-			"description": "",
-			"price": 800,
-			"purchased": false
+			"button": crab_pounder_button,
+			"texture": preload("res://Assets/Weapons/crabPounder.png"),
+			"description": "Just a regular old fashioned Crab Pounder,SMASH!",
+			"price": 200,
+			"purchased": false,
+			"damage" : 1,
+			"audio": null
 		},
-		"GUN": {
-			"button": gun_button,
-			"texture": preload("res://Assets/salmon.PNG"),
-			"description": "Yeah it's not really a gun isn't it?",
+		"CHUNKYSPLATTER": {
+			"button": chunky_splatter_button,
+			"texture": preload("res://Assets/Weapons/chunkySplatter.png"),
+			"description": "A solution to all of your problems",
+			"price": 400,
+			"purchased": false,
+			"damage": 2,
+			"audio": null
+		},
+		"MOMSANDAL": {
+			"button": mom_Sandal_button,
+			"texture": preload("res://Assets/Weapons/momSandal.png"),
+			"description": "Did you stole from your mother closet? She is gonna kill you when she is gonna find out",
 			"price": 600,
-			"purchased": false
+			"purchased": false,
+			"damage": 4,
+			"audio": null
 		},
-		"SANDAL": {
-			"button": sandal_button,
-			"texture": preload("res://Assets/weapon00.png"),
-			"description": "",
-			"price": 1000,
-			"purchased": false
-		},
-		"HAMMER": {
-			"button": hammer_button,
-			"texture": preload("res://Assets/weapon00.png"),
-			"description": "This is a hammer, SMASH!",
-			"price": 500,
-			"purchased": false
+		"FROZENSLAPPER": {
+			"button": frozen_slapper_button,
+			"texture": preload("res://Assets/Weapons/frozenSlapper.PNG"),
+			"description": "Payback must be served, Frost!",
+			"price": 800,
+			"purchased": false,
+			"damage": 999,
+			"audio": null
 		}
 	}
-
 	for weapon_name in weapons_data.keys():
 		var btn = weapons_data[weapon_name]["button"]
 		btn.visible = false
@@ -57,6 +62,10 @@ func _ready() -> void:
 			show_weapon(weapon_name)
 		)
 	
+func _process(delta: float) -> void:
+	if (get_tree().current_scene != null && get_tree().current_scene.scene_file_path =="res://Scenes/weapon_deposit.tscn"):
+		self.visible = true
+	else : self.visible = false
 
 func _on_weapon_unlocked(weapon_name: String) -> void:
 	var weapon = weapons_data.get(weapon_name)
@@ -70,8 +79,7 @@ func _on_close_weapon_storage_button_pressed() -> void:
 		print("Bringing you to another place")
 		SceneLoader.load_scene(target_scene)
 		GlobalTimer.add_timer(0.5)
-		GlobalTimer.timeout.connect(Callable(self,"on_timeout"))
-
+		
 func show_weapon(weapon_name: String) -> void:
 	var weapon = weapons_data.get(weapon_name)
 	if not weapon:
@@ -80,6 +88,3 @@ func show_weapon(weapon_name: String) -> void:
 	stylebox.texture = weapon["texture"]
 	icon_panel.add_theme_stylebox_override("panel", stylebox)
 	description_label.text = weapon["description"]
-
-func on_timeout() -> void:
-	self.visible = false

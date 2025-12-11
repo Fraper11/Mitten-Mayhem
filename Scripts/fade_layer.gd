@@ -9,6 +9,7 @@ func _ready():
 func fade_out():
 	if is_animating:
 		return
+	Input.set_mouse_mode(Input.MouseMode.MOUSE_MODE_HIDDEN)
 	is_animating = true
 	visible = true
 	$AnimationPlayer.play("fade_out")
@@ -17,6 +18,7 @@ func fade_out():
 
 
 func fade_in():
+	Input.set_mouse_mode(Input.MouseMode.MOUSE_MODE_VISIBLE)
 	$AnimationPlayer.play("fade_in")
 	await $AnimationPlayer.animation_finished
 	visible = false

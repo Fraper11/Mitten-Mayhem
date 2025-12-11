@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cffm2e0auow0e"
-path="res://.godot/imported/laptop.PNG-cf5e410663117bace10335d3a662410e.ctex"
+uid="uid://b8yf57dc7qdpq"
+path="res://.godot/imported/ency01.png-2da5102e05a05f4867230eda21a802e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/laptop.PNG"
-dest_files=["res://.godot/imported/laptop.PNG-cf5e410663117bace10335d3a662410e.ctex"]
+source_file="res://Assets/Icons/ency01.png"
+dest_files=["res://.godot/imported/ency01.png-2da5102e05a05f4867230eda21a802e8.ctex"]
 
 [params]
 

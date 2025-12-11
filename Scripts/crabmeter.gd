@@ -14,5 +14,6 @@ func _process(delta: float) -> void:
 		child.visible=false
 	
 	for i in CrabData.crab_population:
-		meter[i].visible=true
+		if (i <10):
+			meter[i].visible=true
 	

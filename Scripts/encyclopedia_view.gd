@@ -3,6 +3,10 @@ extends Control
 @onready var page1_button = $PanelContainer/HBoxContainer/MarginContainer/ButtonContainer/Page1
 @onready var page2_button = $PanelContainer/HBoxContainer/MarginContainer/ButtonContainer/Page2
 @onready var page3_button = $PanelContainer/HBoxContainer/MarginContainer/ButtonContainer/Page3
+@onready var page4_button = $PanelContainer/HBoxContainer/MarginContainer/ButtonContainer/Page4
+@onready var page5_button = $PanelContainer/HBoxContainer/MarginContainer/ButtonContainer/Page5
+@onready var page6_button = $PanelContainer/HBoxContainer/MarginContainer/ButtonContainer/Page6
+
 @onready var button_container = $PanelContainer/HBoxContainer/MarginContainer/ButtonContainer
 
 @onready var icon_panel = $PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel/Icon
@@ -10,15 +14,22 @@ extends Control
 @onready var description_label = $PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel2/Panel/Description
 
 @export var target_scene : SceneStorage.SceneID = SceneStorage.SceneID.NOTHING
+@export var weapon_storage : SceneStorage.SceneID = SceneStorage.SceneID.WEAPONSTORAGE
+
+
 
 func _ready():
 	page1_button.set_meta("page_id", "PAGE_001")
 	page2_button.set_meta("page_id", "PAGE_002")
 	page3_button.set_meta("page_id", "PAGE_003")
+	page4_button.set_meta("page_id", "PAGE_004")
+	page5_button.set_meta("page_id", "PAGE_005")
+	page6_button.set_meta("page_id", "PAGE_006")
 	
 	for btn in button_container.get_children():
 		if btn is Button:
 			btn.pressed.connect(_on_page_button_pressed.bind(btn))
+			
 
 func _process(delta: float) -> void:
 	update_buttons()
@@ -28,6 +39,7 @@ func update_buttons():
 		if btn is Button:
 			var page_id = btn.get_meta("page_id")
 			btn.visible = PlayerData.is_unlocked(page_id)
+			
 		
 func _on_page_button_pressed(button: Button):
 	var page_id = button.get_meta("page_id")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://hcwqurmojk1t"]
+[gd_scene load_steps=7 format=3 uid="uid://hcwqurmojk1t"]
 
-[ext_resource type="Texture2D" uid="uid://cffm2e0auow0e" path="res://Assets/laptop.PNG" id="1_xvb4y"]
-[ext_resource type="Script" path="res://Scripts/switchSceneInteractables.gd" id="2_jda31"]
-[ext_resource type="Texture2D" uid="uid://clek3g40nnm6o" path="res://Assets/weapon00.png" id="4_cpag2"]
+[ext_resource type="Texture2D" uid="uid://cffm2e0auow0e" path="res://Assets/Locations/laptop.PNG" id="1_xvb4y"]
+[ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="2_jda31"]
+[ext_resource type="Texture2D" uid="uid://cad788vmdmqtw" path="res://Assets/Icons/shoppingcart01.png" id="3_c8aik"]
+[ext_resource type="Texture2D" uid="uid://b8yf57dc7qdpq" path="res://Assets/Icons/ency01.png" id="4_cpag2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2u2x3"]
 radius = 35.206867
@@ -12,23 +13,30 @@ size = Vector2(175, 196)
 
 [node name="House" type="Node2D"]
 
-[node name="Laptop" type="Sprite2D" parent="."]
+[node name="Monitor_PC" type="Node2D" parent="."]
+
+[node name="Laptop" type="Sprite2D" parent="Monitor_PC"]
 position = Vector2(575, 325)
 scale = Vector2(0.449, 0.45)
 texture = ExtResource("1_xvb4y")
 
-[node name="PowerOffButton" type="Area2D" parent="Laptop"]
-position = Vector2(527.8396, 308.8889)
+[node name="PowerOffButton" type="Area2D" parent="Monitor_PC"]
+position = Vector2(812, 464)
+scale = Vector2(0.449, 0.45)
 script = ExtResource("2_jda31")
 target_scene = 6
+no_animation = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Laptop/PowerOffButton"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor_PC/PowerOffButton"]
 position = Vector2(4.454343, 2.222222)
 shape = SubResource("CircleShape2D_2u2x3")
 
-[node name="Borders" type="TextureRect" parent="Laptop/PowerOffButton"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Borders" type="TextureRect" parent="Monitor_PC/PowerOffButton"]
+offset_left = -17.817371
+offset_top = -19.999998
+offset_right = 22.182629
+offset_bottom = 20.000002
+metadata/_edit_use_anchors_ = true
 
 [node name="Weapon_Store" type="Area2D" parent="."]
 position = Vector2(344, 171)
@@ -44,7 +52,7 @@ offset_right = 103.7141
 offset_bottom = 86.55499
 scale = Vector2(1.1, 1.1)
 pivot_offset = Vector2(102.5, 102.5)
-texture = ExtResource("4_cpag2")
+texture = ExtResource("3_c8aik")
 expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="Weapon_Store"]
@@ -52,7 +60,7 @@ offset_left = -97.0
 offset_top = -109.0
 offset_right = 103.0
 offset_bottom = 91.0
-texture = ExtResource("4_cpag2")
+texture = ExtResource("3_c8aik")
 expand_mode = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Weapon_Store"]

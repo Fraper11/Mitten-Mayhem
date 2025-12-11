@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://4c5gj1y1s8jw"]
+
+[ext_resource type="Script" uid="uid://b1mkw7qvnkfbs" path="res://Scripts/weapon_torture.gd" id="1_p3rbe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqqyp"]
+size = Vector2(41, 34)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p3rbe"]
+load_path = "res://.godot/imported/Crab01.png-ecfdfeffd7d43f1036f1281e2f575fec.ctex"
+
+[node name="crab_torture" type="Node2D"]
+script = ExtResource("1_p3rbe")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_cqqyp")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.09399991, 0.11891887)
+texture = SubResource("CompressedTexture2D_p3rbe")
+
+[connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]

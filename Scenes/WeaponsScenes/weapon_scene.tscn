@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbliaka7he8hw"]
+
+[ext_resource type="Script" uid="uid://ds3l4b4gjpn7j" path="res://Scripts/crab_pounder_scene.gd" id="1_301ks"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek1ai"]
+radius = 11.491127
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ja3e"]
+radius = 11.491127
+
+[node name="weapon_scene" type="RigidBody2D" groups=["WEAPONS"]]
+script = ExtResource("1_301ks")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.99999976)
+rotation = -3.1415925
+scale = Vector2(0.87023664, 0.9621335)
+shape = SubResource("CapsuleShape2D_ek1ai")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-1, -0.99999976)
+rotation = -3.1415925
+scale = Vector2(1.1902357, 1.442134)
+shape = SubResource("CapsuleShape2D_8ja3e")
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_body_entered"]

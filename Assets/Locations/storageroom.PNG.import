@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://veyx4sihpyg3"
-path="res://.godot/imported/storageroom.PNG-ba58a1503c9b06cbb795ea8b2e1d11fd.ctex"
+path="res://.godot/imported/storageroom.PNG-1cebbfa8ca97d18db37ab1a92d032fd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/storageroom.PNG"
-dest_files=["res://.godot/imported/storageroom.PNG-ba58a1503c9b06cbb795ea8b2e1d11fd.ctex"]
+source_file="res://Assets/Locations/storageroom.PNG"
+dest_files=["res://.godot/imported/storageroom.PNG-1cebbfa8ca97d18db37ab1a92d032fd6.ctex"]
 
 [params]
 

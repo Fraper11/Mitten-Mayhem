@@ -1,5 +1,9 @@
 extends RigidBody2D
+
 @onready var texture :Sprite2D = $Sprite2D
+@onready var audio_stream : AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+var audio 
 var damage : int 
 
 #var dragging = false
@@ -9,6 +13,8 @@ var damage : int
 func _ready():
 	texture.texture = WeaponDeposit.weapons_data[PlayerData.weapon_equipped]["texture"]
 	damage = WeaponDeposit.weapons_data[PlayerData.weapon_equipped]["damage"]
+	audio = WeaponDeposit.weapons_data[PlayerData.weapon_equipped]["audio"]
+	audio_stream.stream = audio
 	#input_pickable = true  # important for click detection
 #
 #func _input_event(viewport, event, shape_idx):
@@ -53,5 +59,6 @@ func _ready():
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("CRAB"):
-		body.takeDamage(damage)  # rimuove il nemico
+		body.takeDamage(damage) 
+		audio_stream.play()
 		self.queue_free()

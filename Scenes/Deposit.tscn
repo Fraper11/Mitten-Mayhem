@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="1_gbig2"]
 [ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="1_gkd5v"]
 [ext_resource type="Texture2D" uid="uid://veyx4sihpyg3" path="res://Assets/Locations/storageroom.PNG" id="1_icsek"]
+[ext_resource type="Texture2D" uid="uid://c1nyyh5ihtfxp" path="res://Assets/Icons/storage_exit_icon.PNG" id="3_dfkim"]
 [ext_resource type="Texture2D" uid="uid://dfted1hffsyit" path="res://Assets/Weapons/crabPounder.png" id="4_spexq"]
 [ext_resource type="Script" uid="uid://cyxosm8utot6r" path="res://Scripts/weapons_shelf.gd" id="5_dfkim"]
 [ext_resource type="Texture2D" uid="uid://ct7v4m8oqomgd" path="res://Assets/Weapons/chunkySplatter.png" id="6_yp2vn"]
@@ -10,10 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d2liy750d0v6l" path="res://Assets/Weapons/frozenSlapper.png" id="8_w1q1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_icsek"]
-size = Vector2(260, 73)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_gbig2"]
-specular_color = Color(0, 0, 0, 1)
+size = Vector2(115, 84.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkd5v"]
 size = Vector2(230, 366)
@@ -51,33 +49,23 @@ script = ExtResource("1_gkd5v")
 target_scene = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoBack"]
-position = Vector2(5.5, 8)
+position = Vector2(2.5, 2.25)
 shape = SubResource("RectangleShape2D_icsek")
 
 [node name="Borders" type="TextureRect" parent="GoBack"]
 modulate = Color(0, 0, 0, 1)
-offset_left = -117.0
-offset_top = -31.0
-offset_right = 113.0
-offset_bottom = 47.0
+offset_left = -53.0
+offset_top = -47.0
+offset_right = 1995.0
+offset_bottom = 2001.0
+scale = Vector2(0.056, 0.046)
 mouse_filter = 2
-texture = SubResource("CanvasTexture_gbig2")
+texture = ExtResource("3_dfkim")
 
-[node name="LightBlue" type="ColorRect" parent="GoBack"]
-offset_left = -112.000015
-offset_top = -27.999996
-offset_right = 105.999985
-offset_bottom = 45.000004
-mouse_filter = 2
-color = Color(0.095464595, 0.46801734, 0.4828999, 1)
-
-[node name="Label" type="Label" parent="GoBack"]
-offset_left = -62.5
-offset_top = -24.5
-offset_right = 62.5
-offset_bottom = 24.5
-text = "Go Back to the MAP"
-vertical_alignment = 2
+[node name="Sprite2D" type="Sprite2D" parent="GoBack"]
+position = Vector2(4, 2)
+scale = Vector2(0.05371093, 0.04492186)
+texture = ExtResource("3_dfkim")
 
 [node name="Torture" type="Area2D" parent="."]
 position = Vector2(330, 327)

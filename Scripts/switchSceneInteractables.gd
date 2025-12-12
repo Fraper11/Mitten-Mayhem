@@ -24,6 +24,7 @@ func _on_mouse_clicked_left(viewport, event, shape_idx):
 			if (target_scene != SceneStorage.SceneID.NOTHING):
 				print("Bringing you to another place")
 				SceneLoader.load_scene(target_scene)
+				ExpCurrencyTest.useDoor()
 				if (target_scene == SceneStorage.SceneID.WEAPONSTORAGE):
 					GlobalTimer.add_timer(0.5)
 					GlobalTimer.timeout.connect(Callable(self,"on_timeout"))

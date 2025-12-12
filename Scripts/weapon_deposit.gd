@@ -25,7 +25,7 @@ func _ready() -> void:
 			"price": 200,
 			"purchased": false,
 			"damage" : 1,
-			"audio": null
+			"audio": preload("res://Audio/CrabPounder.wav")
 		},
 		"CHUNKYSPLATTER": {
 			"button": chunky_splatter_button,
@@ -34,7 +34,7 @@ func _ready() -> void:
 			"price": 400,
 			"purchased": false,
 			"damage": 2,
-			"audio": null
+			"audio": preload("res://Audio/BigRock.wav")
 		},
 		"MOMSANDAL": {
 			"button": mom_Sandal_button,
@@ -43,7 +43,7 @@ func _ready() -> void:
 			"price": 600,
 			"purchased": false,
 			"damage": 4,
-			"audio": null
+			"audio": preload("res://Audio/MomSandal.wav")
 		},
 		"FROZENSLAPPER": {
 			"button": frozen_slapper_button,
@@ -52,7 +52,7 @@ func _ready() -> void:
 			"price": 800,
 			"purchased": false,
 			"damage": 999,
-			"audio": null
+			"audio": preload("res://Audio/frozenSlapper.wav")
 		}
 	}
 	for weapon_name in weapons_data.keys():

@@ -7,8 +7,8 @@ signal weapon_unlocked(weapon_name: String)
 @onready var level : int = 5
 @onready var experience : int = 0
 @onready var exp_to_next_level : int = 10
-@onready var currency : int = 1000
-@onready var crab_inventory_counter : int = 0
+@onready var currency : int = 10000
+@onready var crab_inventory_counter : int = 10
 @onready var weapon_equipped : String = ""
 @onready var crab_killed_counter :int = 0
 

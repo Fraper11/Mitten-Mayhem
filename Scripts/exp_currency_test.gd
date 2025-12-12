@@ -8,6 +8,8 @@ extends Control
 @onready var coins_earned : Control = $Popups/Coins_Earned
 @onready var exp_label : Label = $Popups/Exp_Earned/Label
 @onready var coins_label : Label = $Popups/Coins_Earned/Label
+@onready var popup_sound : AudioStreamPlayer2D = $Popups/popup
+@onready var door_sound : AudioStreamPlayer2D = $Popups/transtition
 
 var in_use : bool = false
 
@@ -28,6 +30,7 @@ func usePopUp (name : String):
 	if in_use == true && name!="page":
 		return
 		
+	popup_sound.play()
 	if name == "page" :
 		page_unlocked.visible = true
 		in_use = true
@@ -51,6 +54,8 @@ func change_text(label : String,sum :int):
 		coins_label.text = ("You Gained "+ str(sum) + " Coins")
 	
 
+func useDoor():
+	door_sound.play()
 
 func on_timeout_page():
 	page_unlocked.visible = false

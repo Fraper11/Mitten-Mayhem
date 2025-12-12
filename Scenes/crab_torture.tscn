@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf47sq2f7xuht"]
+[gd_scene load_steps=6 format=3 uid="uid://cf47sq2f7xuht"]
 
 [ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="1_g1spe"]
 [ext_resource type="Script" uid="uid://y3uvnl7wew6p" path="res://Scripts/crab_torture.gd" id="1_s4odo"]
+[ext_resource type="AudioStream" uid="uid://cykj3t3cq6202" path="res://Audio/Crab_hurt.wav" id="3_0gepe"]
 [ext_resource type="AudioStream" uid="uid://creoi0iq4ig05" path="res://Audio/Shell_crack.wav" id="3_m41mx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pvhtm"]
@@ -20,7 +21,7 @@ scale = Vector2(0.14287978, 0.17599985)
 texture = ExtResource("1_g1spe")
 
 [node name="Damage_taken_audio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_m41mx")
+stream = ExtResource("3_0gepe")
 
 [node name="DeathAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_m41mx")

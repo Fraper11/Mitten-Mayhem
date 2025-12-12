@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://chwkgsmmvyjnf"]
+
+[ext_resource type="AudioStream" uid="uid://kuveg7ti4ug4" path="res://Audio/Happy River Crabs (Loopable Background).wav" id="1_0po0m"]
+[ext_resource type="Script" uid="uid://csa508gdk7jjp" path="res://Scenes/game_music.gd" id="1_taonh"]
+
+[node name="Game_Music" type="Node2D"]
+script = ExtResource("1_taonh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_0po0m")
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

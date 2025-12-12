@@ -83,6 +83,7 @@ rotation = 1.5707964
 scale = Vector2(2, 2)
 texture = ExtResource("9_dx5y2")
 script = ExtResource("9_usbst")
+target_scene = 9
 
 [node name="Dmbottom01" type="Sprite2D" parent="Dangerm02"]
 position = Vector2(-0.5, 15.5)

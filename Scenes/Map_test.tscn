@@ -355,7 +355,6 @@ script = ExtResource("6_ct4m6")
 action_cost = true
 unlock_at_level = 1
 currency_to_add = 10
-crab_to_spawn = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zones/AlgaeZone"]
 position = Vector2(22.5, 10.875)
@@ -384,7 +383,6 @@ script = ExtResource("6_ct4m6")
 action_cost = true
 unlock_at_level = 2
 currency_to_add = 15
-crab_to_spawn = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zones/ClamZone"]
 position = Vector2(-6, 5.875)
@@ -411,7 +409,6 @@ script = ExtResource("6_ct4m6")
 action_cost = true
 unlock_at_level = 3
 currency_to_add = 20
-crab_to_spawn = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zones/SnailZone"]
 position = Vector2(-2, -2.5)
@@ -438,7 +435,6 @@ script = ExtResource("6_ct4m6")
 action_cost = true
 unlock_at_level = 4
 currency_to_add = 30
-crab_to_spawn = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zones/FishZone"]
 position = Vector2(-6, 7)

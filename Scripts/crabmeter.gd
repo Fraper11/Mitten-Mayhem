@@ -1,6 +1,6 @@
 extends Sprite2D
 
-
+@export var target_scene : SceneStorage.SceneID = SceneStorage.SceneID.NOTHING
 var meter:Array = []
 
 func _ready():
@@ -10,6 +10,10 @@ func _ready():
 	print(meter)
 
 func _process(delta: float) -> void:
+	if(CrabData.crab_population>=9):
+		SceneLoader.load_scene(target_scene)
+		CrabData.crab_population=0
+	
 	for child in get_children():
 		child.visible=false
 	

@@ -15,7 +15,7 @@ var scenes = {
 	SceneID.MAP : load("res://Scenes/Map_test.tscn"),
 	SceneID.TORTURE : load("res://Scenes/torture_room.tscn"),
 	SceneID.WIN: preload("res://Scenes/win.tscn"),
-	SceneID.GAMEOVER: preload("res://Scenes/sample_scene_2d.tscn"),
+	SceneID.GAMEOVER: preload("res://Scenes/Failure.tscn"),
 	SceneID.NOTHING: null
 }
 

@@ -1,0 +1,135 @@
+[gd_scene load_steps=10 format=3 uid="uid://b1or3x0axrwsm"]
+
+[ext_resource type="Texture2D" uid="uid://cffm2e0auow0e" path="res://Assets/Locations/laptop.PNG" id="1_3xxyo"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="2_ru4ub"]
+[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="3_liiam"]
+[ext_resource type="Texture2D" uid="uid://bhwqx0rk74s72" path="res://Assets/Icons/Logo.png" id="5_jwsd0"]
+[ext_resource type="Script" uid="uid://crtgo13hqghjr" path="res://Scripts/crab.gd" id="5_tkpdu"]
+[ext_resource type="Script" uid="uid://c8p8bhbav20p5" path="res://Scripts/restart.gd" id="6_cxjpe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hu745"]
+font = ExtResource("2_ru4ub")
+font_size = 17
+font_color = Color(0.8, 0.88235295, 0.73333335, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2ly8h"]
+font = ExtResource("2_ru4ub")
+font_size = 17
+font_color = Color(0.8, 0.88235295, 0.73333335, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hi2hl"]
+font = ExtResource("2_ru4ub")
+font_size = 17
+font_color = Color(0.8, 0.88235295, 0.73333335, 1)
+
+[node name="Failure" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = ExtResource("1_3xxyo")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 52
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "WHAT HAVE YOU DONE?!"
+label_settings = SubResource("LabelSettings_hu745")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "TOO MANY CRABS!!!!!!"
+label_settings = SubResource("LabelSettings_2ly8h")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "CLICK TO RESTART！"
+label_settings = SubResource("LabelSettings_hi2hl")
+horizontal_alignment = 1
+
+[node name="Logo" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(721, 154.99998)
+rotation = 0.41135672
+scale = Vector2(1.5624995, 1.2187501)
+texture = ExtResource("5_jwsd0")
+
+[node name="Panel" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(956, 578)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel2" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(412, 144.99998)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel3" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(124.00001, 572)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel4" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(794, 319.00006)
+rotation = 0.16292001
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel5" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(250.99998, 334)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel6" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(794, 433)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel7" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(404, 399)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel8" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(608, 543)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel9" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(451, 577)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+
+[node name="Panel10" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(847, 45)
+scale = Vector2(0.24, 0.22702703)
+texture = ExtResource("3_liiam")
+script = ExtResource("5_tkpdu")
+
+[node name="Button" type="Button" parent="PanelContainer"]
+layout_mode = 2
+flat = true
+script = ExtResource("6_cxjpe")

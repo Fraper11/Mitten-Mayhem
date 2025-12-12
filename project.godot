@@ -37,6 +37,10 @@ window/stretch/aspect="expand"
 mouse_cursor/custom_image="uid://dbfvlxcjn4ae6"
 window/quality/msaa_2d=1
 
+[dotnet]
+
+project/assembly_name="MittenMayhem"
+
 [input]
 
 mouse_confine={

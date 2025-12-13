@@ -16,7 +16,7 @@ var unlocked_pages = {}
 var unlocked_pages_counter : int 
 
 
-func add_exp(exp_to_add):
+func add_exp(exp_to_add : int):
 	experience += exp_to_add
 	ExpCurrencyTest.change_text("exp",exp_to_add)
 	ExpCurrencyTest.usePopUp("exp")
@@ -30,15 +30,21 @@ func process_levelling():
 		exp_to_next_level = 10 + (level * level * 2)
 		print("Exp to the next Level: ",exp_to_next_level)
 
-func add_Level(lev_to_add):
+func add_Level(lev_to_add: int):
 	level += lev_to_add
 	print("Level: ",level)
 
-func add_currency(cur_to_add):
+func add_currency(cur_to_add: int):
 	currency += cur_to_add
 	ExpCurrencyTest.change_text("coins",cur_to_add)
 	ExpCurrencyTest.usePopUp("coins")
 	print("Balance: ",currency)
+
+func spend_currency(cur_to_spend: int):
+	currency -= cur_to_spend
+	ExpCurrencyTest.spend_currency()
+	print("Balance: ",currency)
+
 
 func unlock_page(page_id: String):
 	if (unlocked_pages.has(page_id) && unlocked_pages[page_id] == true):

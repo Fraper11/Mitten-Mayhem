@@ -342,3 +342,5 @@ offset_bottom = 6.0
 grow_horizontal = 2
 text = "You Gained Coins"
 label_settings = SubResource("LabelSettings_y3rl1")
+
+[node name="Pop_up_sound" type="AudioStreamPlayer2D" parent="."]

@@ -8,8 +8,10 @@ extends Control
 @onready var coins_earned : Control = $Popups/Coins_Earned
 @onready var exp_label : Label = $Popups/Exp_Earned/Label
 @onready var coins_label : Label = $Popups/Coins_Earned/Label
-@onready var popup_sound : AudioStreamPlayer2D = $Popups/popup
-@onready var door_sound : AudioStreamPlayer2D = $Popups/transtition
+@onready var popup_sound : AudioStreamPlayer2D = $Pop_up_sound
+
+var popup_audio_file = preload("res://Audio/PopUp.wav")
+var currency_spent_audio_file = preload("res://Audio/Coin_spent.wav")
 
 var in_use : bool = false
 
@@ -29,7 +31,7 @@ func _process(delta):
 func usePopUp (name : String):
 	if in_use == true && name!="page":
 		return
-		
+	popup_sound.stream = popup_audio_file
 	popup_sound.play()
 	if name == "page" :
 		page_unlocked.visible = true
@@ -47,15 +49,16 @@ func usePopUp (name : String):
 		GlobalTimer.add_timer(1.5)
 		GlobalTimer.timeout.connect(Callable(self,"on_timeout_coins"))
 
+func spend_currency():
+	popup_sound.stream = currency_spent_audio_file
+	popup_sound.play()
+
 func change_text(label : String,sum :int):
 	if label == "exp":
 		exp_label.text = ("You Gained "+ str(sum) + " EXP")
 	if label == "coins":
 		coins_label.text = ("You Gained "+ str(sum) + " Coins")
 	
-
-func useDoor():
-	door_sound.play()
 
 func on_timeout_page():
 	page_unlocked.visible = false

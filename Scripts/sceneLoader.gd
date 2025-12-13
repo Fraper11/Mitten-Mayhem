@@ -1,6 +1,7 @@
 extends Node
 
 var previous_scene_id = SceneStorage.SceneID.MAP
+var current_scene = SceneStorage.SceneID.MAP
 
 func load_scene(scene_id: SceneStorage.SceneID):
 	previous_scene_id = SceneStorage.get_current_scene()
@@ -16,7 +17,11 @@ func load_scene(scene_id: SceneStorage.SceneID):
 	get_tree().change_scene_to_packed(scene_to_load)
 	await get_tree().process_frame
 	await FadeLayer.fade_in()
+	current_scene = scene_id
 
 # Go back to previous scene
 func load_previous_scene():
 	load_scene(previous_scene_id)
+	
+func get_current_scene():
+	return current_scene

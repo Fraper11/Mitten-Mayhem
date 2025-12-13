@@ -34,7 +34,7 @@ func _ready() -> void:
 	
 func _buy_weapon(weapon_key: String) -> void:
 	if ((PlayerData.currency >= WeaponDeposit.weapons_data[weapon_key]["price"]) && (WeaponDeposit.weapons_data[weapon_key]["purchased"]==false)):
-		PlayerData.add_currency(-WeaponDeposit.weapons_data[weapon_key]["price"])
+		PlayerData.spend_currency(WeaponDeposit.weapons_data[weapon_key]["price"])
 		WeaponDeposit.weapons_data[weapon_key]["purchased"] = true
 		emit_signal("weapon_unlocked", weapon_key)
 		print ("WEAPON PURCHASED")

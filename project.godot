@@ -17,6 +17,7 @@ config/icon="uid://bhwqx0rk74s72"
 
 [autoload]
 
+PauseScreen="*res://Scenes/pause_screen.tscn"
 EnemySpawner="*res://Scenes/enemy_spawner.tscn"
 ExpCurrencyTest="*res://Scenes/exp_currency_test.tscn"
 WeaponDeposit="*res://Scenes/weapon_deposit.tscn"

@@ -61,4 +61,5 @@ func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("CRAB"):
 		body.takeDamage(damage) 
 		audio_stream.play()
+		await(audio_stream.finished)
 		self.queue_free()

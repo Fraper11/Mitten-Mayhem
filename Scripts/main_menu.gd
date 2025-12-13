@@ -2,16 +2,15 @@ extends CanvasLayer
 
 
 func pause():
-	self.visible = true
-	GameMusic.stopMusic()
+	self.visible = !self.visible
 
 func _ready() -> void:
-	self.visible = false
+	ExpCurrencyTest.toggle_board(false)
+	GameMusic.stopMusic()
 
-func _on_resume_pressed() -> void:
-	print("PRESSED")
-	self.visible = false
-	GameMusic.playMusic()
+func _on_play_game_pressed() -> void:
+	PlayerData.from_menu = false
+	SceneLoader.load_scene(SceneStorage.SceneID.INTRO)
 
 func _on_encyclopedia_pressed() -> void:
 	if(SceneLoader.get_current_scene()!= SceneStorage.SceneID.ENCYCLOPEDIA):
@@ -21,7 +20,6 @@ func _on_encyclopedia_pressed() -> void:
 		print("You are already there")
 		
 	self.visible = false
-	GameMusic.playMusic()
 
 
 func _on_help_pressed() -> void:
@@ -34,5 +32,7 @@ func _on_help_pressed() -> void:
 func _on_exit_pressed() -> void:
 	print("PRESSED")
 	self.visible = false
-	SceneLoader.load_scene(SceneStorage.SceneID.MAINMENU)
-	
+	if Engine.is_editor_hint():
+		get_tree().paused = true  
+	else:
+		get_tree().quit()

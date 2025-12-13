@@ -33,13 +33,3 @@ func _on_mouse_clicked_left(viewport, event, shape_idx):
 				print("Bringing you to another place")
 				sound_stream.play()
 				SceneLoader.load_scene(target_scene)
-				if (target_scene == SceneStorage.SceneID.WEAPONSTORAGE):
-					GlobalTimer.add_timer(0.5)
-					GlobalTimer.timeout.connect(Callable(self,"on_timeout"))
-					GlobalTimer.add_timer(0.5)
-					GlobalTimer.timeout.connect(Callable(self,"on_timeout_map"))
-					
-
-func on_timeout():
-	print("Ho aspettato")
-	WeaponDeposit.visible = true

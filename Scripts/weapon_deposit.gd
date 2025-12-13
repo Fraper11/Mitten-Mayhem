@@ -47,7 +47,7 @@ func _ready() -> void:
 		},
 		"FROZENSLAPPER": {
 			"button": frozen_slapper_button,
-			"texture": preload("res://Assets/Weapons/frozenSlapper.PNG"),
+			"texture": preload("res://Assets/smallSizeFish.png"),
 			"description": "Payback must be served, Frost!",
 			"price": 800,
 			"purchased": false,
@@ -78,7 +78,7 @@ func _on_close_weapon_storage_button_pressed() -> void:
 	if target_scene != SceneStorage.SceneID.NOTHING:
 		print("Bringing you to another place")
 		SceneLoader.load_scene(target_scene)
-		GlobalTimer.add_timer(0.5)
+		GlobalTimer.add_timer(0.5,Callable())
 		
 func show_weapon(weapon_name: String) -> void:
 	var weapon = weapons_data.get(weapon_name)

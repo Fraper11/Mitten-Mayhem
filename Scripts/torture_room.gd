@@ -47,5 +47,5 @@ func _on_close_torture_room_button_pressed() -> void:
 	if target_scene != SceneStorage.SceneID.NOTHING:
 		print("Bringing you to another place")
 		SceneLoader.load_scene(target_scene)
-		GlobalTimer.add_timer(0.5)
-		GlobalTimer.timeout.connect(Callable(self,"on_timeout"))
+		GlobalTimer.add_timer(0.5,Callable())
+		

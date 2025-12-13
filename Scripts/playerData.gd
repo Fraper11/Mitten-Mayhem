@@ -14,12 +14,12 @@ signal weapon_unlocked(weapon_name: String)
 
 var unlocked_pages = {}
 var unlocked_pages_counter : int 
-
+var from_menu: bool = true
 
 func add_exp(exp_to_add : int):
 	experience += exp_to_add
-	ExpCurrencyTest.change_text("exp",exp_to_add)
-	ExpCurrencyTest.usePopUp("exp")
+	PopUpsScene.change_text("exp",exp_to_add)
+	PopUpsScene.usePopUp("exp")
 	process_levelling()
 	print ("Total Eperience: ",experience)
 
@@ -36,13 +36,13 @@ func add_Level(lev_to_add: int):
 
 func add_currency(cur_to_add: int):
 	currency += cur_to_add
-	ExpCurrencyTest.change_text("coins",cur_to_add)
-	ExpCurrencyTest.usePopUp("coins")
+	PopUpsScene.change_text("coins",cur_to_add)
+	PopUpsScene.usePopUp("coins")
 	print("Balance: ",currency)
 
 func spend_currency(cur_to_spend: int):
 	currency -= cur_to_spend
-	ExpCurrencyTest.spend_currency()
+	PopUpsScene.spend_currency()
 	print("Balance: ",currency)
 
 
@@ -52,7 +52,7 @@ func unlock_page(page_id: String):
 	
 	unlocked_pages[page_id] = true
 	unlocked_pages_counter += 1
-	ExpCurrencyTest.usePopUp("page")
+	PopUpsScene.usePopUp("page")
 	print("UNLOCKED PAGES: ", unlocked_pages)
 	#print("YOU HAVE A TOTAL OF PAGEN N. : " + str(unlocked_pages_counter))
 	if unlocked_pages_counter == 6:
@@ -73,6 +73,8 @@ func add_crab_to_inventory(crabs : int) :
 	
 func equip_weapon(new_weapon : String):
 	weapon_equipped = new_weapon
+	PopUpsScene.change_text("weapon",0)
+	PopUpsScene.usePopUp("weapon")
 
 func add_crab_killed(crab : int):
 	crab_killed_counter += crab

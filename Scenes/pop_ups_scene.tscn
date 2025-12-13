@@ -1,0 +1,221 @@
+[gd_scene load_steps=12 format=3 uid="uid://b3tyv3tm2dewp"]
+
+[ext_resource type="Texture2D" uid="uid://bhwqx0rk74s72" path="res://Assets/Icons/Logo.png" id="1_00ixp"]
+[ext_resource type="Script" uid="uid://debfe5vwobdg4" path="res://Scripts/pop_ups_scene.gd" id="1_5jf8m"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="2_5jf8m"]
+[ext_resource type="Texture2D" uid="uid://cmbpgbmsjdnxg" path="res://Assets/exp01.png" id="3_hbjqi"]
+[ext_resource type="Texture2D" uid="uid://ca31b7avtflht" path="res://Assets/money01.png" id="4_rw124"]
+[ext_resource type="AudioStream" uid="uid://c6w0725wqpn0r" path="res://Audio/Coin_spent.wav" id="6_5jf8m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt7ju"]
+bg_color = Color(0.88235295, 0.69411767, 0.41568628, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t2whl"]
+texture = ExtResource("1_00ixp")
+axis_stretch_horizontal = 2
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aw2ho"]
+font = ExtResource("2_5jf8m")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xirex"]
+texture = ExtResource("3_hbjqi")
+axis_stretch_horizontal = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fo1a3"]
+texture = ExtResource("4_rw124")
+axis_stretch_horizontal = 2
+
+[node name="Popups" type="Control"]
+z_index = 20
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_5jf8m")
+
+[node name="Page_unlocked" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 568.0
+offset_top = 320.0
+offset_right = 608.0
+offset_bottom = 360.0
+
+[node name="Panel" type="Panel" parent="Page_unlocked"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -62.0
+offset_right = 150.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qt7ju")
+
+[node name="Panel2" type="Panel" parent="Page_unlocked"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -146.0
+offset_top = -59.0
+offset_right = -105.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t2whl")
+
+[node name="Label" type="Label" parent="Page_unlocked"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = -10.0
+offset_right = 142.0
+offset_bottom = 13.0
+grow_horizontal = 2
+text = "You Unlocked a New Page!"
+label_settings = SubResource("LabelSettings_aw2ho")
+
+[node name="Exp_Earned" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 543.0
+offset_top = 618.0
+offset_right = 583.0
+offset_bottom = 658.0
+
+[node name="Panel" type="Panel" parent="Exp_Earned"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -62.0
+offset_right = 150.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xirex")
+
+[node name="Label" type="Label" parent="Exp_Earned"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_top = -17.0
+offset_right = 241.0
+offset_bottom = 6.0
+grow_horizontal = 2
+text = "You Gained Exp"
+label_settings = SubResource("LabelSettings_aw2ho")
+
+[node name="Coins_Earned" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 543.0
+offset_top = 618.0
+offset_right = 583.0
+offset_bottom = 658.0
+
+[node name="Panel" type="Panel" parent="Coins_Earned"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -85.0
+offset_right = 155.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fo1a3")
+
+[node name="Label" type="Label" parent="Coins_Earned"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_top = -17.0
+offset_right = 241.0
+offset_bottom = 6.0
+grow_horizontal = 2
+text = "You Gained Coins"
+label_settings = SubResource("LabelSettings_aw2ho")
+
+[node name="weapon_equipped" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 556.0
+offset_top = 608.0
+offset_right = 596.0
+offset_bottom = 648.0
+
+[node name="Panel" type="Panel" parent="weapon_equipped"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -62.0
+offset_right = 150.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qt7ju")
+
+[node name="Panel2" type="Panel" parent="weapon_equipped"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -239.0
+offset_top = -58.0
+offset_right = -198.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t2whl")
+
+[node name="Label" type="Label" parent="weapon_equipped"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -189.0
+offset_top = -9.0
+offset_right = 49.0
+offset_bottom = 14.0
+grow_horizontal = 2
+text = "You Equipped"
+label_settings = SubResource("LabelSettings_aw2ho")
+
+[node name="spend_coins" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_5jf8m")

@@ -1,0 +1,147 @@
+[gd_scene load_steps=5 format=3 uid="uid://f7insosbq0ml"]
+
+[ext_resource type="Script" uid="uid://c662wob4l73qe" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="2_1ehe0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8py1w"]
+bg_color = Color(0.88235295, 0.69411767, 0.41568628, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hl5t3"]
+font = ExtResource("2_1ehe0")
+font_color = Color(0, 0, 0, 1)
+
+[node name="Main_menu" type="CanvasLayer"]
+script = ExtResource("1_48xlc")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="PlayGame" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Panel" type="Panel" parent="Control/PanelContainer/MarginContainer/VBoxContainer/PlayGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8py1w")
+
+[node name="Encyclopedia" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Panel" type="Panel" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Encyclopedia"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8py1w")
+
+[node name="Help" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Panel" type="Panel" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Help"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8py1w")
+
+[node name="Exit" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Panel" type="Panel" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8py1w")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 211.0
+offset_right = 624.0
+offset_bottom = 234.0
+text = "Play Game"
+label_settings = SubResource("LabelSettings_hl5t3")
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 279.0
+offset_right = 642.0
+offset_bottom = 302.0
+text = "Encyclopedia"
+label_settings = SubResource("LabelSettings_hl5t3")
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 349.0
+offset_right = 609.0
+offset_bottom = 372.0
+text = "Help"
+label_settings = SubResource("LabelSettings_hl5t3")
+
+[node name="Label4" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 418.0
+offset_right = 621.0
+offset_bottom = 441.0
+text = "Exit Game"
+label_settings = SubResource("LabelSettings_hl5t3")
+
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/PlayGame" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/PlayGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/Encyclopedia" to="." method="_on_encyclopedia_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

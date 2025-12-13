@@ -1,15 +1,16 @@
 # Sleep.gd (singleton)
 extends Node
 
-signal timeout
 
-func add_timer(seconds: float):
+func add_timer(seconds: float,callable:Callable):
 	var timer = Timer.new()
 	timer.wait_time = seconds
 	timer.one_shot = true
 	add_child(timer)
+	CursorMovement.stop_mouse()
 	timer.start()
-	timer.timeout.connect(self._on_timer_timeout)
-	
-func _on_timer_timeout():
-	emit_signal("timeout")
+	if callable != null:
+		timer.timeout.connect(callable)
+		
+	timer.timeout.connect(Callable(CursorMovement, "activate_mouse"))
+	timer.timeout.connect(timer.queue_free)

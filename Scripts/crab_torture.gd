@@ -19,7 +19,7 @@ func takeDamage(damage : int):
 	print(health)
 	if health <= 0 :
 		PlayerData.crab_killed_counter += 1
-		PlayerData.experience += 5
+		PlayerData.add_exp(5)
 		print(PlayerData.crab_killed_counter)
 		audio.stop()
 		death_audio.stop()

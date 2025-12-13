@@ -5,238 +5,159 @@
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_4l55s")
 
-[node name="SpawnPositions" type="Node2D" parent="."]
+[node name="SpawnPositions_land" type="Node2D" parent="."]
 
-[node name="Marker2D" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(18, 242)
 
-[node name="Marker2D6" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(89, 241)
-
-[node name="Marker2D2" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(91, 273)
-
-[node name="Marker2D9" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(112, 403)
-
-[node name="Marker2D11" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D11" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(156, 403)
 
-[node name="Marker2D12" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D12" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(196, 403)
 
-[node name="Marker2D13" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(226, 322)
-
-[node name="Marker2D14" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(267, 403)
-
-[node name="Marker2D15" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(408, 358)
-
-[node name="Marker2D16" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(330, 403)
-
-[node name="Marker2D17" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(358, 404)
-
-[node name="Marker2D18" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(358, 440)
-
-[node name="Marker2D19" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(328, 443)
-
-[node name="Marker2D20" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(373, 520)
-
-[node name="Marker2D21" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(269, 443)
-
-[node name="Marker2D22" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D22" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(216, 443)
 
-[node name="Marker2D23" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D23" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(173, 443)
 
-[node name="Marker2D24" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(98, 465)
-
-[node name="Marker2D25" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D25" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(51, 509)
 
-[node name="Marker2D26" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D26" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(109, 509)
 
-[node name="Marker2D27" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D27" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(148, 509)
 
-[node name="Marker2D28" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(226, 619)
-
-[node name="Marker2D29" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(220, 509)
-
-[node name="Marker2D30" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(256, 512)
-
-[node name="Marker2D31" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(248, 481)
-
-[node name="Marker2D32" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(205, 481)
-
-[node name="Marker2D33" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(107, 594)
-
-[node name="Marker2D34" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(94, 144)
-
-[node name="Marker2D35" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(59, 475)
-
-[node name="Marker2D36" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D36" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(378, 599)
 
-[node name="Marker2D37" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D37" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(412, 601)
 
-[node name="Marker2D38" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D38" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(504, 517)
 
-[node name="Marker2D39" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D39" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(504, 440)
 
-[node name="Marker2D40" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D40" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(547, 505)
 
-[node name="Marker2D41" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D41" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(567, 459)
 
-[node name="Marker2D42" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D42" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(557, 535)
 
-[node name="Marker2D43" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(589, 548)
-
-[node name="Marker2D44" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(602, 580)
-
-[node name="Marker2D45" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(587, 617)
-
-[node name="Marker2D46" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D46" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(651, 632)
 
-[node name="Marker2D47" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D47" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(694, 631)
 
-[node name="Marker2D48" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D48" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(736, 627)
 
-[node name="Marker2D49" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D49" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(777, 625)
 
-[node name="Marker2D50" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D50" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(818, 632)
 
-[node name="Marker2D51" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D51" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(862, 624)
 
-[node name="Marker2D52" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(979, 394)
-
-[node name="Marker2D53" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(775, 297)
-
-[node name="Marker2D54" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D54" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(925, 443)
 
-[node name="Marker2D55" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(925, 443)
-
-[node name="Marker2D56" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(881, 447)
-
-[node name="Marker2D57" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D57" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(806, 443)
 
-[node name="Marker2D58" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(607, 455)
-
-[node name="Marker2D59" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(726, 222)
-
-[node name="Marker2D60" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(691, 223)
-
-[node name="Marker2D61" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D61" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(623, 221)
 
-[node name="Marker2D62" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D62" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(580, 219)
 
-[node name="Marker2D63" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D63" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(345, 278)
 
-[node name="Marker2D64" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D64" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(387, 215)
 
-[node name="Marker2D65" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(193, 230)
-
-[node name="Marker2D66" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(810, 268)
-
-[node name="Marker2D67" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(859, 315)
-
-[node name="Marker2D68" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(943, 281)
-
-[node name="Marker2D69" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(991, 217)
-
-[node name="Marker2D70" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D70" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(845, 213)
 
-[node name="Marker2D71" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D71" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(943, 629)
 
-[node name="Marker2D72" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D72" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(988, 629)
 
-[node name="Marker2D73" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D73" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(1028, 628)
 
-[node name="Marker2D74" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D74" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(1069, 628)
 
-[node name="Marker2D75" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(660, 359)
-
-[node name="Marker2D76" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(831, 357)
-
-[node name="Marker2D77" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(977, 326)
-
-[node name="Marker2D78" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(949, 219)
-
-[node name="Marker2D3" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(650, 446)
-
-[node name="Marker2D4" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(749, 382)
-
-[node name="Marker2D10" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D10" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(568, 437)
 
-[node name="Marker2D5" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D5" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(631, 277)
 
-[node name="Marker2D7" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(238, 566)
-
-[node name="Marker2D8" type="Marker2D" parent="SpawnPositions"]
+[node name="Marker2D8" type="Marker2D" parent="SpawnPositions_land"]
 position = Vector2(327, 223)
+
+[node name="SpawnPositions_water" type="Node2D" parent="."]
+
+[node name="Marker2D13" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(226, 322)
+
+[node name="Marker2D15" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(408, 358)
+
+[node name="Marker2D20" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(373, 520)
+
+[node name="Marker2D28" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(226, 619)
+
+[node name="Marker2D33" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(107, 594)
+
+[node name="Marker2D52" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(979, 394)
+
+[node name="Marker2D53" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(775, 297)
+
+[node name="Marker2D65" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(193, 230)
+
+[node name="Marker2D66" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(810, 268)
+
+[node name="Marker2D67" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(859, 315)
+
+[node name="Marker2D68" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(943, 281)
+
+[node name="Marker2D75" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(660, 359)
+
+[node name="Marker2D76" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(831, 357)
+
+[node name="Marker2D77" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(977, 326)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(749, 382)
+
+[node name="Marker2D7" type="Marker2D" parent="SpawnPositions_water"]
+position = Vector2(238, 566)

@@ -61,8 +61,12 @@ func _on_page_button_pressed(button: Button):
 	
 	
 func _on_close_encyclopedia_button_pressed() -> void:
+	if (PlayerData.from_menu):
+		SceneLoader.load_scene(SceneStorage.SceneID.MAINMENU)
+		GlobalTimer.add_timer(0.5,Callable())
+		return
 	if target_scene != SceneStorage.SceneID.NOTHING:
 		print("Bringing you to another place")
 		SceneLoader.load_scene(target_scene)
-		GlobalTimer.add_timer(0.5)
-		GlobalTimer.timeout.connect(Callable(self,"on_timeout"))
+		GlobalTimer.add_timer(0.5,Callable())
+		

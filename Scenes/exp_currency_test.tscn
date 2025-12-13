@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://dgme2wc6oy8xb"]
+[gd_scene load_steps=28 format=3 uid="uid://dgme2wc6oy8xb"]
 
 [ext_resource type="Script" uid="uid://boauka0rkcxvy" path="res://Scripts/exp_currency_test.gd" id="1_qigve"]
 [ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="3_dx5y2"]
 [ext_resource type="Script" uid="uid://dx4onhidvcliq" path="res://Scripts/timecontrol.gd" id="4_mvagk"]
 [ext_resource type="Texture2D" uid="uid://qslhfcc6e2lw" path="res://Assets/EMclpointer01.png" id="6_pus01"]
 [ext_resource type="Texture2D" uid="uid://b0ff7igek3suu" path="res://Assets/Mclpointer01.png" id="7_usbst"]
+[ext_resource type="AudioStream" uid="uid://cxunkee8t34ko" path="res://Audio/game_over.wav" id="7_y3rl1"]
 [ext_resource type="Texture2D" uid="uid://dfml8l5tv15dm" path="res://Assets/Eclpointer01.png" id="8_dx5y2"]
 [ext_resource type="Texture2D" uid="uid://db1r7pm4nqkqb" path="res://Assets/Meters/dangerm03.png" id="9_dx5y2"]
 [ext_resource type="Texture2D" uid="uid://bs7qi5ke528s4" path="res://Assets/Nclpoint01.png" id="9_n4xhf"]
@@ -83,7 +84,6 @@ rotation = 1.5707964
 scale = Vector2(2, 2)
 texture = ExtResource("9_dx5y2")
 script = ExtResource("9_usbst")
-target_scene = 9
 
 [node name="Dmbottom01" type="Sprite2D" parent="Dangerm02"]
 position = Vector2(-0.5, 15.5)
@@ -124,6 +124,12 @@ texture = ExtResource("10_usbst")
 [node name="DmTop01" type="Sprite2D" parent="Dangerm02"]
 position = Vector2(-0.5, -31.5)
 texture = ExtResource("9_pus01")
+
+[node name="Game_over" type="AudioStreamPlayer2D" parent="Dangerm02"]
+position = Vector2(-88.5, 52.000004)
+rotation = -1.5707964
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("7_y3rl1")
 
 [node name="Board" type="Control" parent="."]
 anchors_preset = 0

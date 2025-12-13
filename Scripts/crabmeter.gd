@@ -1,6 +1,8 @@
 extends Sprite2D
 
-@export var target_scene : SceneStorage.SceneID = SceneStorage.SceneID.NOTHING
+@onready var game_over_sound : AudioStreamPlayer2D = $Game_over
+
+var target_scene : SceneStorage.SceneID = SceneStorage.SceneID.GAMEOVER
 var meter:Array = []
 
 func _ready():
@@ -12,6 +14,7 @@ func _ready():
 func _process(delta: float) -> void:
 	if(CrabData.crab_population>=9):
 		SceneLoader.load_scene(target_scene)
+		game_over_sound.play()
 		CrabData.crab_population=0
 	
 	for child in get_children():

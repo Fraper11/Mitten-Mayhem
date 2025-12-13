@@ -1,13 +1,19 @@
 extends Node2D
 
-@onready var music : AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var music : AudioStreamPlayer2D = $game_music
+@onready var torture_music : AudioStreamPlayer2D = $torture_room
 
-func ready():
-	music.stream_loop = true
-	#music.stream.loop = true
-	
-	#music.play()
-	
-func _on_audio_stream_player_2d_finished() -> void:
-	print("Music is finished")
-	#music.play()
+
+func  _process(delta: float) -> void:
+	if(SceneLoader.current_scene == SceneStorage.SceneID.TORTURE):
+		if (!torture_music.is_playing()):
+			music.stop()
+			torture_music.play()
+	else:
+		if (!music.is_playing()):
+			torture_music.stop()
+			music.play()
+	if(SceneLoader.current_scene == SceneStorage.SceneID.WIN):
+			music.stop()
+			torture_music.stop()
+#			win music play

@@ -10,6 +10,7 @@ extends Control
 @onready var coins_label : Label = $Popups/Coins_Earned/Label
 @onready var popup_sound : AudioStreamPlayer2D = $Pop_up_sound
 
+
 var popup_audio_file = preload("res://Audio/PopUp.wav")
 var currency_spent_audio_file = preload("res://Audio/Coin_spent.wav")
 

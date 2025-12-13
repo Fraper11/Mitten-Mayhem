@@ -13,7 +13,7 @@ script = ExtResource("1_s4odo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
-scale = Vector2(1.5199993, 1.4799993)
+scale = Vector2(1.5199993, 0.91999924)
 shape = SubResource("CircleShape2D_pvhtm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

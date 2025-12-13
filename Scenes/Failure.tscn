@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="3_liiam"]
 [ext_resource type="Texture2D" uid="uid://bhwqx0rk74s72" path="res://Assets/Icons/Logo.png" id="5_jwsd0"]
 [ext_resource type="Script" uid="uid://crtgo13hqghjr" path="res://Scripts/crab.gd" id="5_tkpdu"]
-[ext_resource type="Script" uid="uid://c8p8bhbav20p5" path="res://Scripts/restart.gd" id="6_cxjpe"]
+[ext_resource type="Script" path="res://Scripts/restart.gd" id="6_cxjpe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hu745"]
 font = ExtResource("2_ru4ub")

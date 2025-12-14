@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bctr6cnk4oe77"]
+[gd_scene load_steps=23 format=3 uid="uid://bctr6cnk4oe77"]
 
 [ext_resource type="Texture2D" uid="uid://clek3g40nnm6o" path="res://Assets/weapon00.png" id="1_8onj2"]
 [ext_resource type="Script" uid="uid://cbtibi6he22v1" path="res://Scripts/weapon_store.gd" id="1_ki471"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cdgrhwafotsbb" path="res://Assets/Weapons/momSandal.png" id="5_2l8g8"]
 [ext_resource type="Texture2D" uid="uid://d2liy750d0v6l" path="res://Assets/Weapons/frozenSlapper.png" id="6_2l8g8"]
 [ext_resource type="Texture2D" uid="uid://bo8gvm1jgbrue" path="res://Assets/Icons/x02.png" id="6_7ywo4"]
+[ext_resource type="Texture2D" uid="uid://df1g1ysqd58eh" path="res://Assets/Meters/money.png" id="8_attfu"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="9_8mme1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aggoa"]
 bg_color = Color(0.38933247, 0.6033945, 0.39186558, 1)
@@ -37,6 +39,11 @@ texture = ExtResource("6_2l8g8")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_juj3p"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_us0yn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_juj3p"]
+font = ExtResource("9_8mme1")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
 
 [node name="WeaponStore" type="Control"]
 layout_mode = 3
@@ -346,5 +353,21 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_us0yn")
 icon = ExtResource("6_7ywo4")
 icon_alignment = 1
 expand_icon = true
+
+[node name="MoneyMeter" type="Node2D" parent="."]
+
+[node name="BG" type="Sprite2D" parent="MoneyMeter"]
+position = Vector2(206, 576)
+scale = Vector2(5, 5)
+texture = ExtResource("8_attfu")
+
+[node name="Label" type="Label" parent="MoneyMeter"]
+offset_left = 151.0
+offset_top = 544.0
+offset_right = 386.0
+offset_bottom = 603.0
+text = "value"
+label_settings = SubResource("LabelSettings_juj3p")
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_close_weapon_store_button_pressed"]

@@ -2,6 +2,7 @@ extends Control
 
 signal weapon_unlocked(weapon_name: String)
 
+@onready var money_display = $MoneyMeter/Label
 
 @onready var crab_pounder_cost = %CrabPounderCost
 @onready var chunky_splatter_cost = %ChunkySplatterCost
@@ -28,15 +29,16 @@ func _ready() -> void:
 	
 	#Method to Database connection
 	self.weapon_unlocked.connect(WeaponDeposit._on_weapon_unlocked)
+	
+	money_display.text = "%d" % PlayerData.currency
 
-	
-	
-	
+
 func _buy_weapon(weapon_key: String) -> void:
 	if ((PlayerData.currency >= WeaponDeposit.weapons_data[weapon_key]["price"]) && (WeaponDeposit.weapons_data[weapon_key]["purchased"]==false)):
 		PlayerData.spend_currency(WeaponDeposit.weapons_data[weapon_key]["price"])
 		WeaponDeposit.weapons_data[weapon_key]["purchased"] = true
 		emit_signal("weapon_unlocked", weapon_key)
+		money_display.text = "%d" % PlayerData.currency
 		print ("WEAPON PURCHASED")
 		
 	else : #Can be modified in future to add not enough money/ already purchased logic
@@ -47,4 +49,3 @@ func _on_close_weapon_store_button_pressed() -> void:
 		print("Bringing you to another place")
 		SceneLoader.load_scene(target_scene)
 		GlobalTimer.add_timer(0.5,Callable())
-		

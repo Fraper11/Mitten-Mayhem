@@ -3,7 +3,7 @@ extends Node
 @onready var current_scene_id: SceneID = SceneID.MAP
 
 
-enum SceneID {MAIN,HOUSE, DEPOSIT, WEAPONSTORAGE, WEAPONSTORE, ENCYCLOPEDIA, MAP,TORTURE,WIN,GAMEOVER,INTRO,LOADING,MAINMENU, NOTHING}
+enum SceneID {MAIN,HOUSE, DEPOSIT, WEAPONSTORAGE, WEAPONSTORE, ENCYCLOPEDIA, MAP,TORTURE,WIN,GAMEOVER,INTRO,LOADING,MAINMENU, TUTORIAL, NOTHING}
 # PackedScene references
 var scenes = {
 	SceneID.MAIN : preload("res://Scenes/MainLevel.tscn"),
@@ -19,6 +19,7 @@ var scenes = {
 	SceneID.INTRO: preload("res://Scenes/intro_video.tscn"),
 	SceneID.LOADING: preload("res://Scenes/loading.tscn"),
 	SceneID.MAINMENU: preload("res://Scenes/main_menu.tscn"),
+	SceneID.TUTORIAL: preload("res://Scenes/Tutorial.tscn"),
 	SceneID.NOTHING: null
 }
 

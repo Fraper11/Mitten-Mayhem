@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=3 uid="uid://tfbglka38yix"]
+
+[ext_resource type="Script" uid="uid://chtmn22fpdl6l" path="res://Scenes/tutorialreturn.gd" id="1_7bloo"]
+[ext_resource type="Texture2D" uid="uid://cafb15qsmafr8" path="res://Assets/tutorial01.png" id="1_wduq8"]
+[ext_resource type="Texture2D" uid="uid://ch361jaqkqjba" path="res://Assets/Icons/x03.png" id="2_2o727"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="3_uo1fs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7bloo"]
+font = ExtResource("3_uo1fs")
+font_size = 200
+font_color = Color(0.0045364476, 0.004536448, 0.0045364476, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uo1fs"]
+font = ExtResource("3_uo1fs")
+font_size = 125
+font_color = Color(3.6161753e-05, 0.0013174457, 0.0035881836, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rlm2d"]
+font = ExtResource("3_uo1fs")
+font_size = 100
+font_color = Color(0.83, 0.024899976, 0.024899976, 1)
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_7bloo")
+
+[node name="Tutorial01" type="Sprite2D" parent="."]
+position = Vector2(576.75, 322.5)
+scale = Vector2(0.2293, 0.21366668)
+texture = ExtResource("1_wduq8")
+
+[node name="Button" type="Button" parent="Tutorial01"]
+offset_left = 2190.3618
+offset_top = -1406.3962
+offset_right = 2417.1396
+offset_bottom = -1195.7878
+icon = ExtResource("2_2o727")
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Tutorial01"]
+offset_left = -744.6577
+offset_top = -1303.4321
+offset_right = 655.3423
+offset_bottom = -1103.4321
+text = "HOW TO PLAY"
+label_settings = SubResource("LabelSettings_7bloo")
+
+[node name="Label2" type="Label" parent="Tutorial01"]
+offset_left = -2205.6257
+offset_top = -1003.9001
+offset_right = 1937.4187
+offset_bottom = -797.97186
+text = "1.Click on different zones to harvest and obtain coins"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label3" type="Label" parent="Tutorial01"]
+offset_left = -2214.348
+offset_top = -737.12946
+offset_right = 1649.5862
+offset_bottom = -432.9173
+text = "2. Click on the crabs that crawl around to collect
+ them in the warehouse"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label4" type="Label" parent="Tutorial01"]
+offset_left = -2209.9868
+offset_top = -334.63336
+offset_right = 1605.9749
+offset_bottom = -30.421204
+text = "3. Use coins to purchase weapons in the store"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label5" type="Label" parent="Tutorial01"]
+offset_left = -2209.9868
+offset_top = -67.86272
+offset_right = 1614.6973
+offset_bottom = 226.98909
+text = "4. Choose weapons in the warehouse to take care 
+the crabs and gain experience"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label6" type="Label" parent="Tutorial01"]
+offset_left = -2188.1814
+offset_top = 348.67395
+offset_right = 1636.5027
+offset_bottom = 643.5258
+text = "5. After you level up, you can unlock new zones 
+and purchase new weapons"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label7" type="Label" parent="Tutorial01"]
+offset_left = -1813.1268
+offset_top = 905.6162
+offset_right = 1562.3639
+offset_bottom = 1200.468
+text = "Try doing all kinds of things and clicking on 
+different items to enrich your encyclopedia"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label8" type="Label" parent="Tutorial01"]
+offset_left = 1741.169
+offset_top = 521.8409
+offset_right = 2395.334
+offset_bottom = 1415.7566
+text = "Attention
+Don't let 
+too many
+ crabs 
+wander 
+around 
+your
+ territory"
+label_settings = SubResource("LabelSettings_rlm2d")

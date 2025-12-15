@@ -25,7 +25,7 @@ func _on_encyclopedia_pressed() -> void:
 func _on_help_pressed() -> void:
 	print("PRESSED")
 	self.visible = false
-	#SceneLoader.load_scene(SceneStorage.scenes["HELP"])
+	SceneLoader.load_scene(SceneStorage.SceneID.TUTORIAL)
 	pass # Replace with function body.
 
 

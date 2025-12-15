@@ -1,39 +1,39 @@
-[gd_scene load_steps=8 format=3 uid="uid://tfbglka38yix"]
+[gd_scene load_steps=8 format=3 uid="uid://djnweo4ps721d"]
 
-[ext_resource type="Script" uid="uid://chtmn22fpdl6l" path="res://Scripts/tutorialreturn.gd" id="1_7bloo"]
-[ext_resource type="Texture2D" uid="uid://cafb15qsmafr8" path="res://Assets/Locations/tutorial01.png" id="1_wduq8"]
-[ext_resource type="Texture2D" uid="uid://ch361jaqkqjba" path="res://Assets/Icons/x03.png" id="2_2o727"]
-[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="3_uo1fs"]
+[ext_resource type="Script" uid="uid://chtmn22fpdl6l" path="res://Scripts/tutorialreturn.gd" id="1_ddyt3"]
+[ext_resource type="Texture2D" uid="uid://cafb15qsmafr8" path="res://Assets/Locations/tutorial01.png" id="2_8g4by"]
+[ext_resource type="Texture2D" uid="uid://ch361jaqkqjba" path="res://Assets/Icons/x03.png" id="3_r6pb8"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="4_cqneb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7bloo"]
-font = ExtResource("3_uo1fs")
+font = ExtResource("4_cqneb")
 font_size = 200
 font_color = Color(0.0045364476, 0.004536448, 0.0045364476, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uo1fs"]
-font = ExtResource("3_uo1fs")
+font = ExtResource("4_cqneb")
 font_size = 125
 font_color = Color(3.6161753e-05, 0.0013174457, 0.0035881836, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rlm2d"]
-font = ExtResource("3_uo1fs")
+font = ExtResource("4_cqneb")
 font_size = 100
 font_color = Color(0.83, 0.024899976, 0.024899976, 1)
 
 [node name="Tutorial" type="Node2D"]
-script = ExtResource("1_7bloo")
+script = ExtResource("1_ddyt3")
 
 [node name="Tutorial01" type="Sprite2D" parent="."]
 position = Vector2(576.75, 322.5)
 scale = Vector2(0.2293, 0.21366668)
-texture = ExtResource("1_wduq8")
+texture = ExtResource("2_8g4by")
 
 [node name="Button" type="Button" parent="Tutorial01"]
 offset_left = 2190.3618
 offset_top = -1406.3962
 offset_right = 2417.1396
 offset_bottom = -1195.7878
-icon = ExtResource("2_2o727")
+icon = ExtResource("3_r6pb8")
 flat = true
 expand_icon = true
 
@@ -50,7 +50,7 @@ offset_left = -2205.6257
 offset_top = -1003.9001
 offset_right = 1937.4187
 offset_bottom = -797.97186
-text = "1.Click on different zones to harvest and obtain coins"
+text = "This is the Storage"
 label_settings = SubResource("LabelSettings_uo1fs")
 
 [node name="Label3" type="Label" parent="Tutorial01"]
@@ -58,8 +58,7 @@ offset_left = -2214.348
 offset_top = -737.12946
 offset_right = 1649.5862
 offset_bottom = -432.9173
-text = "2. Click on the crabs that crawl around to collect
- them in the warehouse"
+text = "1. Click on a weapon that appear on the shelf to equip it"
 label_settings = SubResource("LabelSettings_uo1fs")
 
 [node name="Label4" type="Label" parent="Tutorial01"]
@@ -67,41 +66,14 @@ offset_left = -2209.9868
 offset_top = -334.63336
 offset_right = 1605.9749
 offset_bottom = -30.421204
-text = "3. Use coins to purchase weapons in the store"
-label_settings = SubResource("LabelSettings_uo1fs")
-
-[node name="Label5" type="Label" parent="Tutorial01"]
-offset_left = -2209.9868
-offset_top = -67.86272
-offset_right = 1614.6973
-offset_bottom = 226.98909
-text = "4. Choose weapons in the warehouse to take care 
-the crabs and gain experience"
-label_settings = SubResource("LabelSettings_uo1fs")
-
-[node name="Label6" type="Label" parent="Tutorial01"]
-offset_left = -2188.1814
-offset_top = 348.67395
-offset_right = 1636.5027
-offset_bottom = 643.5258
-text = "5. After you level up, you can unlock new zones 
-and purchase new weapons"
-label_settings = SubResource("LabelSettings_uo1fs")
-
-[node name="Label7" type="Label" parent="Tutorial01"]
-offset_left = -1813.1268
-offset_top = 905.6162
-offset_right = 1562.3639
-offset_bottom = 1200.468
-text = "Try doing all kinds of things and clicking on 
-different items to enrich your encyclopedia"
+text = "2.Dont open the freezer"
 label_settings = SubResource("LabelSettings_uo1fs")
 
 [node name="Label8" type="Label" parent="Tutorial01"]
-offset_left = 1749.8909
-offset_top = 690.3276
-offset_right = 2404.056
-offset_bottom = 1584.2433
+offset_left = 1758.613
+offset_top = 592.0437
+offset_right = 2412.778
+offset_bottom = 1485.9595
 text = "WARNING
 Don't let 
 too many

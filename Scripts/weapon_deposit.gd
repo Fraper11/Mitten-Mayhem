@@ -47,7 +47,7 @@ func _ready() -> void:
 		},
 		"FROZENSLAPPER": {
 			"button": frozen_slapper_button,
-			"texture": preload("res://Assets/smallSizeFish.png"),
+			"texture": preload("res://Assets/WildLife/smallSizeFish.png"),
 			"description": "Payback must be served, Frost!",
 			"price": 800,
 			"purchased": false,
@@ -88,3 +88,7 @@ func show_weapon(weapon_name: String) -> void:
 	stylebox.texture = weapon["texture"]
 	icon_panel.add_theme_stylebox_override("panel", stylebox)
 	description_label.text = weapon["description"]
+
+func weapon_reset():
+	for weapon in weapons_data.values():
+		weapon["purchased"] = false

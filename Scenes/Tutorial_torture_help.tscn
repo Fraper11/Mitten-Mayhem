@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://baymehe4iqthp"]
+
+[ext_resource type="Script" uid="uid://chtmn22fpdl6l" path="res://Scripts/tutorialreturn.gd" id="1_emgl0"]
+[ext_resource type="Texture2D" uid="uid://cafb15qsmafr8" path="res://Assets/Locations/tutorial01.png" id="2_bxb84"]
+[ext_resource type="Texture2D" uid="uid://ch361jaqkqjba" path="res://Assets/Icons/x03.png" id="3_t656i"]
+[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="4_1rniv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7bloo"]
+font = ExtResource("4_1rniv")
+font_size = 200
+font_color = Color(0.0045364476, 0.004536448, 0.0045364476, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uo1fs"]
+font = ExtResource("4_1rniv")
+font_size = 125
+font_color = Color(3.6161753e-05, 0.0013174457, 0.0035881836, 1)
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_emgl0")
+
+[node name="Tutorial01" type="Sprite2D" parent="."]
+position = Vector2(576.75, 322.5)
+scale = Vector2(0.2293, 0.21366668)
+texture = ExtResource("2_bxb84")
+
+[node name="Button" type="Button" parent="Tutorial01"]
+offset_left = 2190.3618
+offset_top = -1406.3962
+offset_right = 2417.1396
+offset_bottom = -1195.7878
+icon = ExtResource("3_t656i")
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Tutorial01"]
+offset_left = -744.6577
+offset_top = -1303.4321
+offset_right = 655.3423
+offset_bottom = -1103.4321
+text = "HOW TO PLAY"
+label_settings = SubResource("LabelSettings_7bloo")
+
+[node name="Label2" type="Label" parent="Tutorial01"]
+offset_left = -2205.6257
+offset_top = -1003.9001
+offset_right = 1937.4187
+offset_bottom = -797.97186
+text = "This is the inside of the ice chamber "
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label3" type="Label" parent="Tutorial01"]
+offset_left = -2214.348
+offset_top = -737.12946
+offset_right = 1649.5862
+offset_bottom = -432.9173
+text = "1. Click on the crab button to Spawn crabs"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label4" type="Label" parent="Tutorial01"]
+offset_left = -2209.9868
+offset_top = -334.63336
+offset_right = 1605.9749
+offset_bottom = -30.421204
+text = "2.Click on top of the crabs to let a weapon smash w"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[node name="Label5" type="Label" parent="Tutorial01"]
+offset_left = -2205.6257
+offset_top = 35.10144
+offset_right = 1622.3743
+offset_bottom = 339.3136
+text = "3.If you miss, right click to reset the weapon"
+label_settings = SubResource("LabelSettings_uo1fs")
+
+[connection signal="pressed" from="Tutorial01/Button" to="." method="_on_button_pressed"]

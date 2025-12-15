@@ -3,37 +3,49 @@
 	"PAGE_001": {
 		"id": 1,
 		"title": "The Chinese Mitten Crab",
-		"text": "The Chinese Mitten Crab is a predatory crab known for its hairy claws and its invasive intent. It lives in fresh waters.",
+		"text": "The Chinese Mitten Crab is a predatory crab known for its hairy claws and its invasive intent. It lives in fresh waters.
+		
+		HINT: Take care of one crab in the torture room",
 		"image": "res://Assets/Crab01.png"
 	},
 	"PAGE_002": {
 		"id": 2,
 		"title": "Taxonomy",
-		"text": "A decapod crustacean from the family Varunidae, adapted to both freshwater and saltwater environments.",
+		"text": "A decapod crustacean from the family Varunidae, adapted to both freshwater and saltwater environments.
+		
+		HINT: Take care of more crabs in the torture room",
 		"image": ""
 	},
 	"PAGE_003": {
 		"id": 3,
 		"title": "Lifecycle",
-		"text": "The Chinese Mitten Crab is catadromous species, the adults migrate to the ocean to spawn, larvae grow in saltwater, and juveniles travel far upstream into freshwater before returning to the sea to reproduce.",
+		"text": "The Chinese Mitten Crab is catadromous species, the adults migrate to the ocean to spawn, larvae grow in saltwater, and juveniles travel far upstream into freshwater before returning to the sea to reproduce.'
+		
+		HINT: Check the Main Map for invasive traits",
 		"image": ""
 	},
 	"PAGE_004": {
 		"id": 4,
 		"title": "Invasive Traits",
-		"text": "Highly mobile, climbs surfaces, burrows into banks, tolerates many environments, and females can carry up to one million eggs.",
+		"text": "Highly mobile, climbs surfaces, burrows into banks, tolerates many environments, and females can carry up to one million eggs.
+		
+		HINT: What's on that Sign again?",
 		"image": ""
 	},
 	"PAGE_005": {
 		"id": 5,
 		"title": "Ecological Impact",
-		"text": "Competes with native species, eats fish eggs and plants, and damages habitats through burrowing, altering entire river systems.",
+		"text": "Competes with native species, eats fish eggs and plants, and damages habitats through burrowing, altering entire river systems.
+		
+		HINT: That Bridge doesnt look stable",
 		"image": ""
 	},
 	"PAGE_006": {
 		"id": 6,
 		"title": "Human Concern",
-		"text": "May carry lung parasites if eaten raw. Large migrations can cause road blockages, drain clogs, and urban disturbances.",
+		"text": "May carry lung parasites if eaten raw. Large migrations can cause road blockages, drain clogs, and urban disturbances.
+		
+		HINT: Collect a crab",
 		"image": ""
 	}
 	

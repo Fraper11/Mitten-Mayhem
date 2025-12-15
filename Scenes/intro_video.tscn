@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0q2t36266xg0"]
 
 [ext_resource type="Script" uid="uid://820ojawhncif" path="res://Scripts/intro_video.gd" id="1_jsyq0"]
-[ext_resource type="VideoStream" uid="uid://b015yhejbufe2" path="res://EncyclopediaData/mitten_intro.ogv" id="1_rvc6d"]
+[ext_resource type="VideoStream" uid="uid://6aq6ljituj76" path="res://Intro_video/mitten_intro.ogv" id="2_kiiqq"]
 [ext_resource type="AudioStream" uid="uid://cakuu35xhaq4l" path="res://Audio/Intro_music.wav" id="3_kiiqq"]
 
 [node name="Intro_video" type="Control"]
@@ -22,7 +22,7 @@ offset_right = 768.0
 offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("1_rvc6d")
+stream = ExtResource("2_kiiqq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_kiiqq")

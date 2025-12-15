@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bhwqx0rk74s72" path="res://Assets/Icons/Logo.png" id="1_00ixp"]
 [ext_resource type="Script" uid="uid://debfe5vwobdg4" path="res://Scripts/pop_ups_scene.gd" id="1_5jf8m"]
 [ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="2_5jf8m"]
-[ext_resource type="Texture2D" uid="uid://cmbpgbmsjdnxg" path="res://Assets/exp01.png" id="3_hbjqi"]
-[ext_resource type="Texture2D" uid="uid://ca31b7avtflht" path="res://Assets/money01.png" id="4_rw124"]
+[ext_resource type="Texture2D" uid="uid://cmbpgbmsjdnxg" path="res://Assets/Meters/exp01.png" id="3_hbjqi"]
+[ext_resource type="Texture2D" uid="uid://ca31b7avtflht" path="res://Assets/Meters/money01.png" id="4_rw124"]
 [ext_resource type="AudioStream" uid="uid://c6w0725wqpn0r" path="res://Audio/Coin_spent.wav" id="6_5jf8m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt7ju"]

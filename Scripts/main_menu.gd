@@ -7,6 +7,8 @@ func pause():
 func _ready() -> void:
 	ExpCurrencyTest.toggle_board(false)
 	GameMusic.stopMusic()
+	PlayerData.player_reset()
+	WeaponDeposit.weapon_reset()
 
 func _on_play_game_pressed() -> void:
 	PlayerData.from_menu = false

@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=3 uid="uid://m4ya5x5luicu"]
 
 [ext_resource type="Script" uid="uid://b6pgsitpxxrl3" path="res://Scripts/loading.gd" id="1_hl3gf"]
-[ext_resource type="Texture2D" uid="uid://cafb15qsmafr8" path="res://Assets/tutorial01.png" id="2_1lxvg"]
-[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/Crab01.png" id="3_mml6u"]
+[ext_resource type="Texture2D" uid="uid://cafb15qsmafr8" path="res://Assets/Locations/tutorial01.png" id="2_1lxvg"]
+[ext_resource type="Texture2D" uid="uid://7on72nme473m" path="res://Assets/WildLife/Crab01.png" id="3_mml6u"]
 [ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="4_rl1o0"]
-[ext_resource type="Texture2D" uid="uid://bhelnisla1any" path="res://Assets/Brown trout.PNG" id="5_w76sl"]
-[ext_resource type="Texture2D" uid="uid://y2r8dibyeswx" path="res://Assets/Perch.PNG" id="6_wwomi"]
-[ext_resource type="Texture2D" uid="uid://dwjkbrakpc6a7" path="res://Assets/salmon.PNG" id="7_5cse4"]
+[ext_resource type="Texture2D" uid="uid://bhelnisla1any" path="res://Assets/WildLife/Brown trout.PNG" id="5_w76sl"]
+[ext_resource type="Texture2D" uid="uid://y2r8dibyeswx" path="res://Assets/WildLife/Perch.PNG" id="6_wwomi"]
+[ext_resource type="Texture2D" uid="uid://dwjkbrakpc6a7" path="res://Assets/WildLife/salmon.PNG" id="7_5cse4"]
 [ext_resource type="AudioStream" uid="uid://qcnanbjsolf1" path="res://Audio/snapping_loading.wav" id="8_7woxa"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtuao"]

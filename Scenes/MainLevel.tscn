@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://h31yil13mlem"]
 
-[ext_resource type="Script" uid="uid://i67l2vokmwe7" path="res://Scripts/cursorMovement.gd" id="1_s1b4b"]
-[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/interactables.gd" id="2_snxwr"]
+[ext_resource type="Script" uid="uid://i67l2vokmwe7" path="res://Scripts/CursorMovement.gd" id="1_s1b4b"]
+[ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="2_snxwr"]
 [ext_resource type="Script" uid="uid://dx4onhidvcliq" path="res://Scripts/timecontrol.gd" id="3_b2f5p"]
-[ext_resource type="Texture2D" uid="uid://c3f00oi7gypo7" path="res://Assets/clock01.png" id="4_dnhx3"]
-[ext_resource type="Texture2D" uid="uid://qslhfcc6e2lw" path="res://Assets/EMclpointer01.png" id="5_7g1pw"]
-[ext_resource type="Texture2D" uid="uid://b0ff7igek3suu" path="res://Assets/Mclpointer01.png" id="6_o8t5j"]
-[ext_resource type="Texture2D" uid="uid://dfml8l5tv15dm" path="res://Assets/Eclpointer01.png" id="7_4s6sc"]
-[ext_resource type="Texture2D" uid="uid://bs7qi5ke528s4" path="res://Assets/Nclpoint01.png" id="8_w85lu"]
+[ext_resource type="Texture2D" uid="uid://c3f00oi7gypo7" path="res://Assets/Meters/clock01.png" id="4_dnhx3"]
+[ext_resource type="Texture2D" uid="uid://qslhfcc6e2lw" path="res://Assets/Meters/EMclpointer01.png" id="5_7g1pw"]
+[ext_resource type="Texture2D" uid="uid://b0ff7igek3suu" path="res://Assets/Meters/Mclpointer01.png" id="6_o8t5j"]
+[ext_resource type="Texture2D" uid="uid://dfml8l5tv15dm" path="res://Assets/Meters/Eclpointer01.png" id="7_4s6sc"]
+[ext_resource type="Texture2D" uid="uid://bs7qi5ke528s4" path="res://Assets/Meters/Nclpoint01.png" id="8_w85lu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6gbon"]
 size = Vector2(299, 111)

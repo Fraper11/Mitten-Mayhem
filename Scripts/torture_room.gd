@@ -5,7 +5,7 @@ var target_scene = SceneStorage.SceneID.DEPOSIT
 
 
 @onready var spawn_area :Area2D =$Torture_Zone/Spawn_area
-@onready var weapon: PackedScene = preload("res://Scenes/WeaponsScenes/weapon_scene.tscn")
+@onready var weapon: PackedScene = preload("res://Scenes/weapon_scene.tscn")
 @onready var crab_inventory : Label =$PanelContainer/MarginContainer/HBoxContainer/Crab_Inventory
 
 func _ready() -> void:

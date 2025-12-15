@@ -5,13 +5,13 @@
 [ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="3_m01ul"]
 [ext_resource type="Texture2D" uid="uid://clad1wl13lgpp" path="res://Assets/Locations/house2.0.PNG" id="4_pgx8s"]
 [ext_resource type="Texture2D" uid="uid://ddm3udfh1ppvg" path="res://Assets/Locations/storehouse2.0.PNG" id="5_1yrm1"]
-[ext_resource type="Texture2D" uid="uid://dvltesaysu4wt" path="res://Assets/waterweed.PNG" id="5_ct4m6"]
+[ext_resource type="Texture2D" uid="uid://dvltesaysu4wt" path="res://Assets/WildLife/waterweed.PNG" id="5_ct4m6"]
 [ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="6_ct4m6"]
-[ext_resource type="Texture2D" uid="uid://5e5lrl0t32cw" path="res://Assets/river mussel.PNG" id="6_h8hc2"]
-[ext_resource type="Texture2D" uid="uid://bku68e27im4fh" path="res://Assets/snail.PNG" id="7_db7c4"]
+[ext_resource type="Texture2D" uid="uid://5e5lrl0t32cw" path="res://Assets/WildLife/river mussel.PNG" id="6_h8hc2"]
+[ext_resource type="Texture2D" uid="uid://bku68e27im4fh" path="res://Assets/WildLife/snail.PNG" id="7_db7c4"]
 [ext_resource type="Script" uid="uid://c7htsritkl36v" path="res://Scripts/unlock_page_test.gd" id="7_h8hc2"]
 [ext_resource type="Texture2D" uid="uid://333nr6igcc8w" path="res://Assets/Icons/sing01.png" id="8_m01ul"]
-[ext_resource type="Texture2D" uid="uid://y2r8dibyeswx" path="res://Assets/Perch.PNG" id="9_pgx8s"]
+[ext_resource type="Texture2D" uid="uid://y2r8dibyeswx" path="res://Assets/WildLife/Perch.PNG" id="9_pgx8s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h8hc2"]
 texture = ExtResource("1_uusx0")

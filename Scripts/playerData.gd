@@ -83,3 +83,11 @@ func add_crab_killed(crab : int):
 		unlock_page("PAGE_002")
 	if crab_killed_counter == 10 : 
 		unlock_page("PAGE_003")
+		
+func player_reset():
+	level = 1
+	experience = 0
+	currency = 0
+	crab_inventory_counter = 0
+	weapon_equipped = ""
+	crab_killed_counter = 0

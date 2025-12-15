@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dt4skcr58o22s"]
+[gd_scene load_steps=20 format=3 uid="uid://dt4skcr58o22s"]
 
 [ext_resource type="Script" uid="uid://druoc5onrxt58" path="res://Scripts/Interactables.gd" id="1_gbig2"]
 [ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="1_gkd5v"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://ct7v4m8oqomgd" path="res://Assets/Weapons/chunkySplatter.png" id="6_yp2vn"]
 [ext_resource type="Texture2D" uid="uid://cdgrhwafotsbb" path="res://Assets/Weapons/momSandal.png" id="7_vxxbk"]
 [ext_resource type="Texture2D" uid="uid://d2liy750d0v6l" path="res://Assets/Weapons/frozenSlapper.png" id="8_w1q1q"]
+[ext_resource type="Script" uid="uid://8do7jt65ftrm" path="res://Scripts/tutorial_help_deposit.gd" id="10_w1q1q"]
+[ext_resource type="Texture2D" uid="uid://333nr6igcc8w" path="res://Assets/Icons/sing01.png" id="11_gqegp"]
+[ext_resource type="Texture2D" uid="uid://btbc1tjc1qw8d" path="res://Assets/Icons/help button.PNG" id="12_ehnkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_icsek"]
 size = Vector2(115, 84.5)
@@ -31,6 +34,9 @@ height = 93.68738
 radius = 41.887024
 height = 178.08911
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flchv"]
+size = Vector2(103, 60)
+
 [node name="Deposit" type="Node2D"]
 
 [node name="Background" type="PanelContainer" parent="."]
@@ -44,7 +50,8 @@ texture = ExtResource("1_icsek")
 expand_mode = 1
 
 [node name="GoBack" type="Area2D" parent="."]
-position = Vector2(576, 602)
+position = Vector2(577, 610)
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_gkd5v")
 target_scene = 6
 
@@ -135,3 +142,24 @@ texture = ExtResource("8_w1q1q")
 position = Vector2(0.99993896, 1)
 rotation = 1.3674328
 shape = SubResource("CapsuleShape2D_vxxbk")
+
+[node name="tutorial_help" type="Node2D" parent="."]
+script = ExtResource("10_w1q1q")
+
+[node name="Tutorial" type="Sprite2D" parent="tutorial_help"]
+position = Vector2(576, 502)
+scale = Vector2(4, 4)
+texture = ExtResource("11_gqegp")
+
+[node name="HelpButton" type="Sprite2D" parent="tutorial_help"]
+position = Vector2(583, 481)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("12_ehnkr")
+
+[node name="Area2D" type="Area2D" parent="tutorial_help"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial_help/Area2D"]
+position = Vector2(575.5, 488)
+shape = SubResource("RectangleShape2D_flchv")
+
+[connection signal="input_event" from="tutorial_help/Area2D" to="tutorial_help" method="_on_area_2d_input_event"]

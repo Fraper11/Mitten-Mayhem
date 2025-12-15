@@ -8,6 +8,7 @@ extends Control
 @onready var spend_money_sound : AudioStreamPlayer2D = $spend_coins
 @onready var weapon_equipped : Control = $weapon_equipped
 @onready var weapon_label : Label = $weapon_equipped/Label
+@onready var level_insufficient : Control = $Level_insufficient
 
 var currency_spent_audio_file = preload("res://Audio/Coin_spent.wav")
 var popup_audio_file = preload("res://Audio/PopUp.wav")
@@ -18,6 +19,7 @@ func _ready() -> void:
 	exp_earned.visible = false
 	coins_earned.visible = false
 	weapon_equipped.visible = false
+	level_insufficient.visible = false
 	
 	
 func usePopUp (name : String):
@@ -39,6 +41,8 @@ func toggle_visibility(popup_name : String):
 		coins_earned.visible = !coins_earned.visible
 	if popup_name == "weapon":
 		weapon_equipped.visible = !weapon_equipped.visible
+	if popup_name == "level":
+		level_insufficient.visible = !level_insufficient.visible
 
 func spend_currency():
 	spend_money_sound.play()

@@ -10,6 +10,7 @@ size = Vector2(10, 9)
 [sub_resource type="Animation" id="Animation_rxpyl"]
 resource_name = "Idle"
 length = 4.5
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -108,5 +109,21 @@ speed_scale = 1.5
 
 [node name="grab" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_rxpyl")
+
+[node name="RayRightLand" type="RayCast2D" parent="."]
+target_position = Vector2(22, 0)
+collision_mask = 2
+
+[node name="RayLeftLand" type="RayCast2D" parent="."]
+target_position = Vector2(-22, 0)
+collision_mask = 2
+
+[node name="RayRightWater" type="RayCast2D" parent="."]
+target_position = Vector2(22, 0)
+collision_mask = 4
+
+[node name="RayLeftWater" type="RayCast2D" parent="."]
+target_position = Vector2(-22, 0)
+collision_mask = 4
 
 [connection signal="input_event" from="Sprite2D/Area2D" to="." method="_on_area_2d_input_event"]

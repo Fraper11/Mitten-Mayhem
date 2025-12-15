@@ -111,3 +111,5 @@ around
 your
  territory"
 label_settings = SubResource("LabelSettings_rlm2d")
+
+[connection signal="pressed" from="Tutorial01/Button" to="." method="_on_button_pressed"]

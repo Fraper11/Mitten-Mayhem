@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://hcwqurmojk1t"]
+[gd_scene load_steps=9 format=3 uid="uid://hcwqurmojk1t"]
 
 [ext_resource type="Texture2D" uid="uid://cffm2e0auow0e" path="res://Assets/Locations/laptop.PNG" id="1_xvb4y"]
 [ext_resource type="Script" uid="uid://sqs87dvbr4u8" path="res://Scripts/switchSceneInteractables.gd" id="2_jda31"]
 [ext_resource type="Texture2D" uid="uid://cad788vmdmqtw" path="res://Assets/Icons/shoppingcart01.png" id="3_c8aik"]
 [ext_resource type="Script" uid="uid://bu6241g5neo2b" path="res://Scenes/computer_icons.gd" id="3_cpag2"]
 [ext_resource type="Texture2D" uid="uid://b8yf57dc7qdpq" path="res://Assets/Icons/ency01.png" id="4_cpag2"]
+[ext_resource type="Texture2D" uid="uid://bcq0q3m7ookwk" path="res://Assets/Icons/arrow.png" id="6_jda31"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2u2x3"]
 radius = 35.206867
@@ -96,3 +97,9 @@ expand_mode = 1
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Encyclopedia"]
 position = Vector2(2.5, -8)
 shape = SubResource("RectangleShape2D_cpag2")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(787.00006, 407.00003)
+rotation = 0.2866404
+scale = Vector2(2.375, 2.5625)
+texture = ExtResource("6_jda31")

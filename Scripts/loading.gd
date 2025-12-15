@@ -7,6 +7,8 @@ func _ready() -> void:
 	
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	SceneLoader.load_scene(SceneStorage.SceneID.MAP)
+	SceneLoader.load_scene(SceneStorage.SceneID.TUTORIAL)
+	SceneLoader.previous_scene = SceneStorage.SceneID.MAP
 	GameMusic.playMusic()
+	
 	

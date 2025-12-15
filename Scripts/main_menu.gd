@@ -10,6 +10,7 @@ func _ready() -> void:
 
 func _on_play_game_pressed() -> void:
 	PlayerData.from_menu = false
+	SceneLoader.previous_scene = SceneStorage.SceneID.MAP
 	SceneLoader.load_scene(SceneStorage.SceneID.INTRO)
 
 func _on_encyclopedia_pressed() -> void:
@@ -26,7 +27,6 @@ func _on_help_pressed() -> void:
 	print("PRESSED")
 	self.visible = false
 	SceneLoader.load_scene(SceneStorage.SceneID.TUTORIAL)
-	pass # Replace with function body.
 
 
 func _on_exit_pressed() -> void:

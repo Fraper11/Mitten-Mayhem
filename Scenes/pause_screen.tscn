@@ -1,14 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://dubnwe34vjxw1"]
+[gd_scene load_steps=20 format=3 uid="uid://dubnwe34vjxw1"]
 
 [ext_resource type="Script" uid="uid://dm86bwr6sxirx" path="res://Scripts/pause_screen.gd" id="1_8py1w"]
-[ext_resource type="FontFile" uid="uid://lunpbpkmib3c" path="res://Assets/Fonts/small_pixel.ttf" id="1_xub4q"]
+[ext_resource type="Texture2D" uid="uid://bnqvptef207d" path="res://Assets/Start menu.PNG" id="2_hl5t3"]
+[ext_resource type="Texture2D" uid="uid://df0cuswj2ra2m" path="res://Assets/Icons/resume button.PNG" id="3_umkmc"]
+[ext_resource type="Texture2D" uid="uid://ceph3ddka0yv1" path="res://Assets/Icons/encyclopedia new botton.PNG" id="4_mvwk4"]
+[ext_resource type="Texture2D" uid="uid://btbc1tjc1qw8d" path="res://Assets/Icons/help button.PNG" id="5_kt4h4"]
+[ext_resource type="Texture2D" uid="uid://b0s1go1fm4kit" path="res://Assets/Icons/exit gmae button.PNG" id="6_8nwfw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8py1w"]
-bg_color = Color(0.88235295, 0.69411767, 0.41568628, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_16tsp"]
+texture = ExtResource("2_hl5t3")
 
-[sub_resource type="LabelSettings" id="LabelSettings_hl5t3"]
-font = ExtResource("1_xub4q")
-font_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_umkmc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvwk4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kt4h4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3lb5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kt4h4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8nwfw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cverb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ca7t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1hsfb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uodgr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2fdq6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2it1r"]
 
 [node name="Pause_screen" type="CanvasLayer"]
 script = ExtResource("1_8py1w")
@@ -30,12 +57,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_16tsp")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
 mouse_filter = 2
 theme_override_constants/margin_left = 200
-theme_override_constants/margin_top = 200
+theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 200
 
@@ -47,98 +76,54 @@ theme_override_constants/separation = 20
 [node name="Resume" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_umkmc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mvwk4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kt4h4")
 
-[node name="Panel" type="Panel" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Resume"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8py1w")
+[node name="ResumeButton" type="Sprite2D" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Resume"]
+position = Vector2(113, 7.0000153)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_umkmc")
 
 [node name="Encyclopedia" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f3lb5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kt4h4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8nwfw")
 
-[node name="Panel" type="Panel" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Encyclopedia"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8py1w")
+[node name="EncyclopediaNewBotton" type="Sprite2D" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Encyclopedia"]
+position = Vector2(113, 8)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_mvwk4")
 
 [node name="Help" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cverb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8ca7t")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1hsfb")
 
-[node name="Panel" type="Panel" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Help"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8py1w")
+[node name="HelpButton" type="Sprite2D" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Help"]
+position = Vector2(113, 9)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_kt4h4")
 
 [node name="Exit" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uodgr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2fdq6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2it1r")
 
-[node name="Panel" type="Panel" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Exit"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8py1w")
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 539.0
-offset_top = 209.0
-offset_right = 607.0
-offset_bottom = 232.0
-text = "Resume"
-label_settings = SubResource("LabelSettings_hl5t3")
-
-[node name="Label2" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 279.0
-offset_right = 642.0
-offset_bottom = 302.0
-text = "Encyclopedia"
-label_settings = SubResource("LabelSettings_hl5t3")
-
-[node name="Label3" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 547.0
-offset_top = 349.0
-offset_right = 609.0
-offset_bottom = 372.0
-text = "Help"
-label_settings = SubResource("LabelSettings_hl5t3")
-
-[node name="Label4" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 535.0
-offset_top = 418.0
-offset_right = 621.0
-offset_bottom = 441.0
-text = "Exit Game"
-label_settings = SubResource("LabelSettings_hl5t3")
+[node name="ExitGmaeButton" type="Sprite2D" parent="Control/PanelContainer/MarginContainer/VBoxContainer/Exit"]
+position = Vector2(113, 10)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_8nwfw")
 
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Control/PanelContainer/MarginContainer/VBoxContainer/Encyclopedia" to="." method="_on_encyclopedia_pressed"]

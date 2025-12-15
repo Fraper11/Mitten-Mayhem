@@ -4,17 +4,18 @@ extends Node
 signal weapon_unlocked(weapon_name: String)
 
 
-@onready var level : int = 5
+@onready var level : int = 1
 @onready var experience : int = 0
 @onready var exp_to_next_level : int = 10
-@onready var currency : int = 10000
-@onready var crab_inventory_counter : int = 10
+@onready var currency : int = 0
+@onready var crab_inventory_counter : int = 0
 @onready var weapon_equipped : String = ""
 @onready var crab_killed_counter :int = 0
 
 var unlocked_pages = {}
 var unlocked_pages_counter : int 
 var from_menu: bool = true
+
 
 func add_exp(exp_to_add : int):
 	experience += exp_to_add
